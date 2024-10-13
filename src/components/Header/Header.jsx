@@ -3,14 +3,17 @@ import css from "./Header.module.css";
 export const Header = () => {
   return (
     <header className={css.header}>
-      {/* <div className="navbar"> */}
-      <div className={css.logo}>
-        <a href="/">TravelTrucks</a>
+      <div className={css.divLogo}>
+        <a className={css.logo} href="/">
+          Travel
+          <span className={css.logoSpan}>Trucks</span>
+        </a>
       </div>
+
       <nav>
         <ul className={css.navigationList}>
           <li>
-            <a className={css.linkItem} href="#">
+            <a className={`${css.linkItem} ${css.active}`} href="#">
               Home
             </a>
           </li>
@@ -19,7 +22,6 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      {/* </div>     */}
     </header>
   );
 };

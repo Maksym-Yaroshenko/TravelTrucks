@@ -3,12 +3,20 @@ header {
     background-color: var(--inputs);
 }
 
-.logo {
+.divLogo {
     display: block;
     position: absolute;
     top: 24px;
     left: 64px;
+}
 
+.logo {
+    color: var(--main);
+    font-weight: 800;
+}
+
+.logoSpan {
+    color: var(--text);
 }
 
 .navigationList {
@@ -21,6 +29,15 @@ header {
 }
 
 .linkItem {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--main);
+
     padding-top: 24px;
     padding-bottom: 24px;
+}
+
+.linkItem.active {
+    color: var(--button-hover)
 }

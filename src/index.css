@@ -41,15 +41,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   color: var(--main);
   margin: 0;
 }
 
-p {
-  color: var(--text);
-  margin: 0;
-}
 
 ul,
 ol {

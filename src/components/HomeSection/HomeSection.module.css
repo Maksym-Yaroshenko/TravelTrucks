@@ -6,4 +6,53 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+}
+
+.h1Text {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 66.67%;
+    color: var(--inputs);
+
+    margin-top: 260px;
+    margin-bottom: 16px;
+}
+
+.h3Text {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.33%;
+    color: var(--inputs);
+
+    margin-bottom: 40px;
+}
+
+.vievNowBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 173px;
+    height: 56px;
+
+    background-color: var(--button);
+    border: 0;
+    border-radius: 200px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    /* letter-spacing: -0.08px; */
+    letter-spacing: -0.005em;
+    color: var(--white);
+
+    transition: background-color 250ms ease-in-out;
+}
+
+.vievNowBtn:hover {
+    background-color: var(--button-hover);
 }
