@@ -1,0 +1,26 @@
+header {
+    position: relative;
+    background-color: var(--inputs);
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 64px;
+
+}
+
+.navigationList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.linkItem {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
