@@ -1,6 +1,8 @@
+// src/components/Header/Header.jsx
+
 import css from "./Header.module.css";
 
-export const Header = () => {
+export default function Header() {
   return (
     <header className={css.header}>
       <div className={css.divLogo}>
@@ -24,4 +26,4 @@ export const Header = () => {
       </nav>
     </header>
   );
-};
+}
