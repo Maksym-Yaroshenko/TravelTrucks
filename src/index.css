@@ -87,11 +87,19 @@ input {
 }
 
 .container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 64px;
+  }
 }
 
 .visually-hidden {
@@ -112,7 +120,7 @@ input {
 }
 
 @media screen and (min-width: 768px) {
-  .page { 
+  .page {
     padding: 24px 32px 40px 32px;
   }
 

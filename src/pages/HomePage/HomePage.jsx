@@ -6,8 +6,8 @@ import { HomeSection } from "../../components/HomeSection/HomeSection";
 
 export default function HomePage() {
   return (
-    <div className={`${css.HomePage} page`}>
+    <section className={`${css.HomePage} container`}>
       <HomeSection />
-    </div>
+    </section>
   );
 }

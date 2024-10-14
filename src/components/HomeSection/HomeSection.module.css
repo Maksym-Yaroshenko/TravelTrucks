@@ -6,7 +6,7 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
-    padding: 16px;
+    /* padding: 16px; */
 }
 
 .h1Text {
@@ -57,7 +57,7 @@
     background-color: var(--button-hover);
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .homeSection {
         padding: 32px;
     }
@@ -67,4 +67,4 @@
     .homeSection {
         padding: 64px;
     }
-}
+} */
