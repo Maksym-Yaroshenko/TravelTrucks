@@ -10,18 +10,17 @@
 :root {
   --main: #101828;
   --text: #475467;
-  --button: #E44848;
-  --button-hover: #D84343;
-  --dark-gray: #DADDE1;
-  --badges: #F2F4F7;
-  --inputs: #F7F7F7;
-  --white: #FFFFFF;
-  --yellow: #FFC531;
+  --button: #e44848;
+  --button-hover: #d84343;
+  --dark-gray: #dadde1;
+  --badges: #f2f4f7;
+  --inputs: #f7f7f7;
+  --white: #ffffff;
+  --yellow: #ffc531;
 }
 
-
 body {
-  font-family: 'Inter', 'Helvetica Neue', 'Roboto', sans-serif;
+  font-family: "Inter", "Helvetica Neue", "Roboto", sans-serif;
   font-size: 16px;
   background-color: var(--white);
   color: var(--main);
@@ -82,26 +81,6 @@ input {
   font-family: inherit;
 }
 
-.section {
-  margin: auto;
-}
-
-.container {
-  padding: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    padding: 32px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
-    padding: 64px;
-  }
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -115,13 +94,13 @@ input {
   overflow: hidden;
 }
 
-.page {
-  padding: 12px 16px 32px 16px;
+.section {
+  padding: 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .page {
-    padding: 24px 32px 40px 32px;
+  .section {
+    padding: 32px;
   }
 
   p {
@@ -131,7 +110,7 @@ input {
 }
 
 @media screen and (min-width: 1440px) {
-  .page {
-    padding: 48px 64px 80px 64px;
+  .section {
+    padding: 64px;
   }
 }
