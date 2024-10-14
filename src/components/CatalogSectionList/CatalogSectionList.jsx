@@ -1,5 +1,7 @@
-// src/components/CatalogSectionList/CatalogSectionList.jsx
+//src/components/CatalogSectionList/CatalogSectionList.jsx
 
 export const CatalogSectionList = () => {
-  return <></>;
+  return (
+ <></>
+  );
 };
