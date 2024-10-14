@@ -6,7 +6,6 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
-    /* padding: 16px; */
 }
 
 .h1Text {
@@ -46,7 +45,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
-    /* letter-spacing: -0.08px; */
     letter-spacing: -0.005em;
     color: var(--white);
 
@@ -56,15 +54,3 @@
 .vievNowBtn:hover {
     background-color: var(--button-hover);
 }
-
-/* @media screen and (min-width: 768px) {
-    .homeSection {
-        padding: 32px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .homeSection {
-        padding: 64px;
-    }
-} */
