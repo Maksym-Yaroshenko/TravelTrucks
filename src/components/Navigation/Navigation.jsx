@@ -27,7 +27,7 @@ export default function Navigation() {
               }`}
               to="/catalog"
             >
-              Contacts
+              Catalog
             </NavLink>
           </li>
         </ul>
