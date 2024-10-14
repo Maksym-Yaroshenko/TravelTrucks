@@ -1,13 +1,16 @@
 header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     position: relative;
     background-color: var(--inputs);
 }
 
 .divLogo {
-    display: block;
-    position: absolute;
-    top: 24px;
-    left: 64px;
+    grid-column: 1 / 2 ;
+    justify-content: start;
+    padding-left: 24px;
+    margin-right: 30px;
 }
 
 .logo {
@@ -17,15 +20,6 @@ header {
 
 .logoSpan {
     color: var(--text);
-}
-
-.navigationList {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-
 }
 
 .linkItem {
@@ -40,4 +34,19 @@ header {
 
 .linkItem.active {
     color: var(--button-hover)
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .header {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
 }

@@ -1,3 +1,5 @@
+// src/components/App.jsx
+
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from "./Layout/Layout.jsx";

@@ -1,3 +1,5 @@
+// src/components/Navigation/Navigation.jsx
+
 import { NavLink, useLocation } from "react-router-dom";
 
 import css from "./Navigation.module.css";
@@ -9,7 +11,6 @@ export default function Navigation() {
   // const isLoggedIn = useSelector(selectisLoggedIn);
 
   return (
-    <>
       <nav>
         <ul className={css.navigationList}>
           <li>
@@ -32,6 +33,5 @@ export default function Navigation() {
           </li>
         </ul>
       </nav>
-    </>
   );
 }

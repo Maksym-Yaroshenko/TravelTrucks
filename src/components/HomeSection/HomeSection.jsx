@@ -1,3 +1,5 @@
+// src/components/HomeSection/HomeSection.jsx
+
 import css from "./HomeSection.module.css";
 import "../../index.css";
 
