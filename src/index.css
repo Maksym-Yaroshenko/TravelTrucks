@@ -10,26 +10,23 @@
 :root {
   --main: #101828;
   --text: #475467;
-  --button: #E44848;
-  --button-hover: #D84343;
-  --dark-gray: #DADDE1;
-  --badges: #F2F4F7;
-  --inputs: #F7F7F7;
-  --white: #FFFFFF;
-  --yellow: #FFC531;
+  --button: #e44848;
+  --button-hover: #d84343;
+  --dark-gray: #dadde1;
+  --badges: #f2f4f7;
+  --inputs: #f7f7f7;
+  --white: #ffffff;
+  --yellow: #ffc531;
 }
 
-
 body {
-  font-family: 'Inter', 'Helvetica Neue', 'Roboto', sans-serif;
+  font-family: "Inter", "Helvetica Neue", "Roboto", sans-serif;
   font-size: 16px;
   background-color: var(--white);
   color: var(--main);
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /* padding: 16px; */
-  /* height: 100vh; */
 }
 
 body::-webkit-scrollbar {
@@ -47,6 +44,13 @@ p {
   margin: 0;
 }
 
+p {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 11px;
+}
 
 ul,
 ol {
@@ -77,18 +81,6 @@ input {
   font-family: inherit;
 }
 
-.section {
-  margin: auto;
-}
-
-.container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -102,14 +94,23 @@ input {
   overflow: hidden;
 }
 
-/* @media screen and (min-width: 768px) {
-  body {
+.section {
+  padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
     padding: 32px;
+  }
+
+  p {
+    line-height: 24px;
+    font-size: 16px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  body {
+  .section {
     padding: 64px;
   }
-} */
+}
