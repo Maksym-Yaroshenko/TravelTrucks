@@ -1,13 +1,21 @@
-import HomePage from "../pages/HomePage/HomePage";
-import CatalogPage from "../pages/CatalogPage/CatalogPage";
 import { Route, Routes } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import Layout from "./Layout/Layout.jsx";
+import Loader from "./Loader/Loader.jsx";
+
+const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
+const CatalogPage = lazy(() => import("../pages/CatalogPage/CatalogPage"));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/catalog" element={<CatalogPage />} />
-    </Routes>
+    <Layout>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }
 
