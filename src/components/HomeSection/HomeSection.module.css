@@ -8,6 +8,16 @@
     overflow: hidden;
 }
 
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+screen and (min-resolution: 2dppx) and (min-width: 1440px),
+screen and (min-devace-pixel-ratio: 2) and (min-width: 1440px) {
+    .homeSection {
+        background-image: url("../../images/HomePicture@2x.jpg");
+    }
+}
+
+
+
 .h1Text {
     font-size: 48px;
     font-style: normal;
