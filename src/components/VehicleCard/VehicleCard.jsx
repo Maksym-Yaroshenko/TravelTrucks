@@ -9,7 +9,7 @@ export default function VehicleCard({ truck }) {
       <h2>{truck.name}</h2>
       <p>Price: ${truck.price}</p>
       <p>
-        <a href={`/reviews/${truck.id}`} className={css.RatingLink}>
+        <a href={`/catalog/${truck.id}`} className={css.RatingLink}>
           Rating: {truck.rating}({truck.reviews.length} Reviews)
         </a>
       </p>
