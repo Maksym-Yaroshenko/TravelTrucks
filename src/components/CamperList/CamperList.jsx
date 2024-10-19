@@ -4,14 +4,20 @@ import css from "./CamperList.module.css";
 import { useEffect, useState } from "react";
 import { getTrucks } from "../../redux/trucks/operations.js";
 import { useDispatch, useSelector } from "react-redux";
-import VehicleCard from "../VehicleCard/VehicleCard.jsx"
+import VehicleCard from "../VehicleCard/VehicleCard.jsx";
+import Loader from "../Loader/Loader.jsx";
+import {
+  selectTrucks,
+  selectIsLoading,
+  selectError,
+} from "../../redux/trucks/selectors.js";
 
 export const CamperList = () => {
   const dispatch = useDispatch();
 
-  const trucks = useSelector((state) => state.trucks.items);
-  const isLoading = useSelector((state) => state.trucks.isLoading);
-  const error = useSelector((state) => state.trucks.error);
+  const trucks = useSelector(selectTrucks);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   const [visibleCount, setVisibleCount] = useState(4);
 
@@ -27,10 +33,10 @@ export const CamperList = () => {
     } else {
       setVisibleCount(nextCount);
     }
-  }
+  };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    <Loader />;
   }
 
   if (error) {

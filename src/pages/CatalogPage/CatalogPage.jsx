@@ -9,7 +9,7 @@ export default function CatalogPage() {
   return (
     <section className={`${css.CatalogPage} section`}>
       <FiltersForm className={css.Filters} />
-      <CamperList className={css.CamperList}/>
+      <CamperList className={css.CamperList} />
     </section>
   );
 }

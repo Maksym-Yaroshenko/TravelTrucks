@@ -12,7 +12,14 @@ export const FiltersForm = () => {
         <li>
           Filters
           <ul>
-            <li>Vehicle equipment</li>
+            <li>
+              Vehicle equipment
+              <ul>
+                <li>
+                  <div></div>
+                </li>
+              </ul>
+            </li>
             <li>Vehicle type</li>
           </ul>
         </li>
