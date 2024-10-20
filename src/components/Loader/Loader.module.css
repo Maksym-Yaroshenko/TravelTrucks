@@ -1,13 +1,18 @@
 .container {
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
     margin-top: 50px;
-    margin-left: 100px; */
-    position: absolute;
+    margin-left: 100px;
+
+    /* display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center; */
+    /* position: absolute;
     transform: translatey(-50%);
     top: 50%;
-    left: 50%;
+    left: 50%; */
 
 }

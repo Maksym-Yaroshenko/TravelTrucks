@@ -1,3 +1,27 @@
 
 .CatalogPage {
-}
+    display: grid; 
+    grid-template-areas:
+      "filters camperList";
+    grid-template-columns: 360px 1fr;
+    gap: 64px;
+    padding-top: 48px;
+    padding-bottom: 58px;
+  }
+  
+  .Filters {
+    grid-area: filters;
+  }
+  
+  .CamperList {
+    grid-area: camperList;
+  }
+  
+  @media (max-width: 768px) {
+    .CatalogPage {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "filters"
+        "camperList";
+    }
+  }
