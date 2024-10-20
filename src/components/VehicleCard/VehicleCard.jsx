@@ -5,7 +5,7 @@ import css from "./VehicleCard.module.css";
 
 export default function VehicleCard({ truck }) {
   return (
-    <div className={css.VehicleCard}>
+    <li className={css.VehicleCard}>
       <div className={css.TruckImage}>
         {truck.gallery.length > 0 && (
           <img src={truck.gallery[0].thumb} alt={`${truck.name} image`} />
@@ -34,7 +34,7 @@ export default function VehicleCard({ truck }) {
       <a href={`/catalog/${truck.id}`} className={css.ShowMoreButton}>
         Show more
       </a>
-    </div>
+    </li>
   );
 }
 

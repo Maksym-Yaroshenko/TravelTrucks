@@ -44,7 +44,7 @@ export const CamperList = () => {
   }
 
   return (
-    <div className={`${css.CamperList}`}>
+    <ul className={`${css.CamperList}`}>
       {trucks.slice(0, visibleCount).map((truck) => (
         <VehicleCard key={truck.id} truck={truck} />
       ))}
@@ -53,6 +53,6 @@ export const CamperList = () => {
           LoadMore
         </button>
       )}
-    </div>
+    </ul>
   );
 };
