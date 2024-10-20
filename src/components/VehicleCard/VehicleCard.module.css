@@ -1,20 +1,3 @@
-.VehicleCard {
-    padding: 16px;
-    width: 840px;
-    background-color: var(--white);
-    border-radius: 20px;
-    border: 1px solid var(--dark-gray);
-}
+.vehicleCard {
 
-.Description {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
-.RatingLink {
-  color: var(--main);
-  text-decoration: underline;
-  cursor: pointer;
 }

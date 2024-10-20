@@ -1,15 +1,15 @@
 // src/pages/CatalogPage.jsx
 
 import { FiltersForm } from "../../components/FiltersForm/FiltersForm";
-import { CamperList } from "../../components/CamperList/CamperList";
+import { CatalogSectionList } from "../../components/CatalogSectionList/CatalogSectionList";
 import css from "./CatalogPage.module.css";
 import "../../index.css";
 
 export default function CatalogPage() {
   return (
     <section className={`${css.CatalogPage} section`}>
-      <FiltersForm className={css.Filters} />
-      <CamperList className={css.CamperList} />
+      <FiltersForm />
+      <CatalogSectionList />
     </section>
   );
 }
