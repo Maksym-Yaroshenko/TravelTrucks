@@ -1,20 +1,133 @@
 .VehicleCard {
-    padding: 16px;
-    width: 840px;
-    background-color: var(--white);
-    border-radius: 20px;
-    border: 1px solid var(--dark-gray);
+  display: grid;
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--dark-gray);
+  line-height: 1.2em;
+  font-size: 14px;
 }
 
-.Description {
+.TruckImage {
+  margin-bottom: 16px;
+}
+
+.TruckName {
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+.TruckPrice {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.TruckRateLoc {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.TruckRatingLink {
+  color: var(--main);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.TruckDescription {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 100%;
+  margin-bottom: 8px;
 }
 
-.RatingLink {
-  color: var(--main);
-  text-decoration: underline;
-  cursor: pointer;
+.TruckFeatures {
+  display: grid;
+  gap: 8px;
+  font-weight: 500;
+  grid-template-columns: repeat(auto-fit, minmax(0, max-content));
+  margin-bottom: 8px;
+}
+
+.FeatureItem {
+  border-radius: 100px;
+  background-color: var(--badges);
+  mix-blend-mode: multiply;
+  padding: 8px 12px;
+}
+
+.ShowMoreButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 30px;
+  font-weight: 500;
+  border-radius: 200px;
+  background-color: var(--button);
+  color: var(--white);
+  font-size: 14px;
+  letter-spacing: -0.08px;
+}
+
+.ShowMoreButton:hover {
+  background-color: var(--button-hover);
+}
+
+@media screen and (min-width: 768px) {
+
+  .VehicleCard {
+    padding: 20px;
+    line-height: 1.6em;
+    font-size: 16px;
+  }
+
+  .TruckName {
+    line-height: 1.6em;
+  }
+
+  .TruckPrice {
+    font-size: 22px;
+  }
+
+  .TruckRateLoc {
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+  }
+
+  .TruckDescription {
+    margin-bottom: 16px;
+  }
+
+  .TruckFeatures {
+    margin-bottom: 16px;
+  }
+
+  .ShowMoreButton {
+    font-size: 16px;
+    padding: 14px 45px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .VehicleCard {
+    padding: 24px;
+    line-height: 2em;
+  }
+
+  .TruckPrice {
+    font-size: 24px;
+  }
+
+  .TruckDescription {
+    margin-bottom: 24px;
+  }
+
+  .TruckFeatures {
+    margin-bottom: 24px;
+  }
+
+  .ShowMoreButton {
+    padding: 16px 60px;
+  }
 }

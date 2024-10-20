@@ -1,8 +1,6 @@
 
 .CamperList {
-    max-width: 840px;
     display: grid;
-    gap: 32px;
 }
 
 .loadMoreButton {

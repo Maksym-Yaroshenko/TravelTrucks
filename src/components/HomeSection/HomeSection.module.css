@@ -1,16 +1,16 @@
 .homeSection {
     background-image: url("../../images/HomePicture.jpg");
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
-screen and (min-resolution: 2dppx) and (min-width: 1440px),
-screen and (min-devace-pixel-ratio: 2) and (min-width: 1440px) {
+@media screen and (min-resolution: 192dpi) and (min-width: 1280px),
+screen and (min-resolution: 2dppx) and (min-width: 1280px),
+screen and (min-devace-pixel-ratio: 2) and (min-width: 1280px) {
     .homeSection {
         background-image: url("../../images/HomePicture@2x.jpg");
     }
