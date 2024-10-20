@@ -24,12 +24,12 @@ export default function VehicleCard({ truck }) {
       </div>
       <p className={css.TruckDescription}>{truck.description}</p>
 
-        <ul className={css.TruckFeatures}>
-          {truck.AC && <li className={css.FeatureItem}>AC</li>}
-          {truck.TV && <li className={css.FeatureItem}>TV</li>}
-          {truck.bathroom && <li className={css.FeatureItem}>Bathroom</li>}
-          {truck.kitchen && <li className={css.FeatureItem}>Kitchen</li>}
-        </ul>
+      <ul className={css.TruckFeatures}>
+        {truck.AC && <li className={css.FeatureItem}>AC</li>}
+        {truck.TV && <li className={css.FeatureItem}>TV</li>}
+        {truck.bathroom && <li className={css.FeatureItem}>Bathroom</li>}
+        {truck.kitchen && <li className={css.FeatureItem}>Kitchen</li>}
+      </ul>
 
       <a href={`/catalog/${truck.id}`} className={css.ShowMoreButton}>
         Show more
