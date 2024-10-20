@@ -1,7 +1,7 @@
 .homeSection {
     background-image: url("../../images/HomePicture.jpg");
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     position: relative;
