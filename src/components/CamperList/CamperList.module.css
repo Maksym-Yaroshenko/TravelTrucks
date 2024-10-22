@@ -10,7 +10,7 @@
 
 .loadMoreButton {
   border-radius: 200px;
-  border: 1px solid var(--dark-gray);
+  border: 1px solid var(--light-gray);
   padding: 16px 32px;
   font-size: 16px;
   font-weight: 500;

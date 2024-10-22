@@ -8,7 +8,7 @@
 
 .locationTitle {
   margin-bottom: 8px;
-  color: var(--gray);
+  color: var(--dark-gray);
 }
 
 .locationContent {
@@ -27,7 +27,7 @@
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 12px;
   margin-bottom: 40px;
-  border-top: 1px solid var(--dark-gray);
+  border-top: 1px solid var(--light-gray);
   padding-top: 24px;
 }
 

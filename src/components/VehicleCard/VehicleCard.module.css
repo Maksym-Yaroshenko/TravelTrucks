@@ -3,7 +3,7 @@
   padding: 16px;
   background-color: var(--white);
   border-radius: 20px;
-  border: 1px solid var(--dark-gray);
+  border: 1px solid var(--light-gray);
   line-height: 1.2em;
   font-size: 14px;
 }

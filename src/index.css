@@ -10,10 +10,10 @@
 :root {
   --main: #101828;
   --text: #475467;
-  --gray: #6C717B;
+  --dark-gray: #6C717B;
   --button: #e44848;
   --button-hover: #d84343;
-  --dark-gray: #dadde1;
+  --light-gray: #dadde1;
   --badges: #f2f4f7;
   --inputs: #f7f7f7;
   --white: #ffffff;
@@ -30,7 +30,17 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0;
+  width: 12px;
+  background-color: var(--light-gray);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text);
 }
 
 h1,
