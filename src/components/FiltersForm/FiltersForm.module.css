@@ -1,25 +1,86 @@
-
 .filtersForm {
-
+  margin-bottom: 60px;
 }
 
-.content {
-    width: 360px;
+.locationContainer {
+  width: 100%;
+}
+
+.locationTitle {
+  margin-bottom: 8px;
+  color: var(--gray);
+}
+
+.locationContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 20px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  background-color: var(--inputs);
+  color: var(--main);
+}
+
+.filterList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+  border-top: 1px solid var(--dark-gray);
+  padding-top: 24px;
+}
+
+.filterItem {
+  padding: 4px 0;
+}
+
+.typeFilter {
+  color: var(--main);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.searchButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 60px;
+  font-weight: 500;
+  border-radius: 200px;
+  background-color: var(--button);
+  color: var(--white);
+  font-size: 14px;
+  letter-spacing: -0.08px;
+}
+
+.searchButton:hover {
+  background-color: var(--button-hover);
+}
+
+@media screen and (min-width: 768px) {
+  .filtersForm {
+    margin-bottom: 32px;
   }
-  
-  .text {
-    color: #6c717b;
-    margin-bottom: 8px;
+
+  .searchButtonContainer {
+    justify-content: flex-end;
   }
-  
-  .location {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 18px 218px 18px 20px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    background-color: #f7f7f7;
-    color: #101828;
+}
+
+@media screen and (min-width: 1280px) {
+  .filtersForm {
+    margin-bottom: 0;
   }
-  
+
+  .searchButtonContainer {
+    justify-content: flex-start;
+  }
+}

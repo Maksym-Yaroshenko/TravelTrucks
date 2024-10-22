@@ -1,5 +1,3 @@
-// src/components/CamperList/CamperList.jsx
-
 import css from "./CamperList.module.css";
 import { useEffect, useState } from "react";
 import { getTrucks } from "../../redux/trucks/operations.js";
@@ -12,7 +10,7 @@ import {
   selectError,
 } from "../../redux/trucks/selectors.js";
 
-export const CamperList = () => {
+export default function CamperList() {
   const dispatch = useDispatch();
 
   const trucks = useSelector(selectTrucks);
@@ -43,15 +41,19 @@ export const CamperList = () => {
   }
 
   return (
-    <ul className={`${css.camperList}`}>
+    <ul className={css.camperList}>
       {trucks.slice(0, visibleCount).map((truck) => (
-        <VehicleCard key={truck.id} truck={truck} />
+        <li key={truck.id}>
+          <VehicleCard truck={truck} />
+        </li>
       ))}
       {visibleCount < trucks.length && (
-        <button onClick={loadMore} className={css.LoadMoreButton}>
-          LoadMore
-        </button>
+        <li className={css.loadMoreButtonContainer}>
+          <button onClick={loadMore} className={css.loadMoreButton}>
+            Load More
+          </button>
+        </li>
       )}
     </ul>
   );
-};
+}

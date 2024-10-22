@@ -56,10 +56,12 @@
   padding: 8px 12px;
 }
 
-.showMoreButton {
+.showMoreButtonContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.showMoreButton {
   padding: 12px 30px;
   font-weight: 500;
   border-radius: 200px;
@@ -74,7 +76,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .vehicleCard {
     padding: 20px;
     line-height: 1.6em;
@@ -102,6 +103,10 @@
     margin-bottom: 16px;
   }
 
+  .showMoreButtonContainer {
+    justify-content: flex-end;
+  }
+
   .showMoreButton {
     font-size: 16px;
     padding: 14px 45px;
@@ -109,7 +114,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-
   .vehicleCard {
     padding: 24px;
     line-height: 2em;
@@ -125,6 +129,10 @@
 
   .truckFeatures {
     margin-bottom: 24px;
+  }
+
+  .showMoreButtonContainer {
+    justify-content: center;
   }
 
   .showMoreButton {

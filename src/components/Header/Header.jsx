@@ -5,15 +5,15 @@ import css from "./Header.module.css";
 
 export default function Header() {
   return (
-      <header className={css.header}>
-        <div className={css.divLogo}>
-          <a className={css.logo} href="/">
-            Travel
-            <span className={css.logoSpan}>Trucks</span>
-          </a>
-        </div>
+    <header className={css.header}>
+      <div className={css.divLogo}>
+        <a className={css.logo} href="/">
+          Travel
+          <span className={css.logoSpan}>Trucks</span>
+        </a>
+      </div>
 
-        <Navigation />
-      </header>
+      <Navigation />
+    </header>
   );
 }

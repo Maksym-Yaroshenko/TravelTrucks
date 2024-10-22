@@ -1,18 +1,18 @@
-// src/components/VehicleCard/VehicleCard.jsx
-
 import PropTypes from "prop-types";
 import css from "./VehicleCard.module.css";
+import "../../index.css";
 
 export default function VehicleCard({ truck }) {
   return (
-    <li className={css.vehicleCard}>
+    <div className={css.vehicleCard}>
+      <h2 className="visually-hidden">Trucks List</h2>
       <div className={css.truckImage}>
         {truck.gallery.length > 0 && (
           <img src={truck.gallery[0].thumb} alt={`${truck.name} image`} />
         )}
       </div>
 
-      <h2 className={css.truckName}>{truck.name}</h2>
+      <h3 className={css.truckName}>{truck.name}</h3>
       <p className={css.truckPrice}>€{truck.price}</p>
       <div className={css.truckRateLoc}>
         <p className={css.truckRating}>
@@ -31,10 +31,12 @@ export default function VehicleCard({ truck }) {
         {truck.kitchen && <li className={css.featureItem}>Kitchen</li>}
       </ul>
 
-      <a href={`/catalog/${truck.id}`} className={css.showMoreButton}>
-        Show more
-      </a>
-    </li>
+      <div className={css.showMoreButtonContainer}>
+        <a href={`/catalog/${truck.id}`} className={css.showMoreButton}>
+          Show more
+        </a>
+      </div>
+    </div>
   );
 }
 

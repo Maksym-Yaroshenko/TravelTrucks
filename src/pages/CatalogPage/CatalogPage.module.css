@@ -13,7 +13,8 @@
   grid-area: camperList;
 }
 
-@media sreen and (min-width: 768px) {}
+@media sreen and (min-width: 768px) {
+}
 
 @media screen and (min-width: 1280px) {
   .CatalogPage {

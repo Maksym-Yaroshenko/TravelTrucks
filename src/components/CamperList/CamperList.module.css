@@ -1,22 +1,25 @@
 .camperList {
   display: grid;
   gap: 16px;
+}
 
-  max-width: 888px;
+.loadMoreButtonContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .loadMoreButton {
-  margin-top: 16px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 200px;
+  border: 1px solid var(--dark-gray);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: -0.08px;
 }
 
 .loadMoreButton:hover {
-  background-color: #0056b3;
+  background-color: var(--button);
 }
 
 @media screen and (min-width: 768px) {
