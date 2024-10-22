@@ -18,7 +18,6 @@ export const CamperList = () => {
   const trucks = useSelector(selectTrucks);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-
   const [visibleCount, setVisibleCount] = useState(4);
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export const CamperList = () => {
   };
 
   if (isLoading) {
-    <Loader />;
+    return <Loader />;
   }
 
   if (error) {

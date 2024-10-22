@@ -2,3 +2,24 @@
 .filtersForm {
 
 }
+
+.content {
+    width: 360px;
+  }
+  
+  .text {
+    color: #6c717b;
+    margin-bottom: 8px;
+  }
+  
+  .location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 18px 218px 18px 20px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    color: #101828;
+  }
+  
