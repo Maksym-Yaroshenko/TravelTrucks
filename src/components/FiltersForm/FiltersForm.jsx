@@ -1,18 +1,29 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setFilter } from "../../redux/trucks/slicer.js";
 import css from "./FiltersForm.module.css";
 import "../../index.css";
-import { selectTrucks } from "../../redux/trucks/selectors.js";
 import { CiMap } from "react-icons/ci";
+
+let filtersForm = {
+  AC: false,
+  Automatic: false,
+  Kitchen: false,
+  TV: false,
+  Bathroom: false,
+  Van: false,
+  FullyIntegrated: false,
+  Alcove: false,
+};
 
 export default function FiltersForm() {
   const dispatch = useDispatch();
-  const filters = useSelector(selectTrucks);
-  console.log(filters);
 
   const handleCheck = (e) => {
     const { name, checked } = e.target;
-    dispatch(setFilter({ filter: name, value: checked }));
+
+    filtersForm = { ...filtersForm, [name]: checked };
+
+    dispatch(setFilter(filtersForm));
   };
 
   const equipmentLabels = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
@@ -36,12 +47,7 @@ export default function FiltersForm() {
           {equipmentLabels.map((label) => (
             <div key={label} className={css.filterItem}>
               <label>
-                <input
-                  type="checkbox"
-                  name={label}
-                  checked={filters[label] || false}
-                  onChange={handleCheck}
-                />
+                <input type="checkbox" name={label} onChange={handleCheck} />
                 {label}
               </label>
             </div>
@@ -55,12 +61,7 @@ export default function FiltersForm() {
           {typeLabels.map((label) => (
             <li key={label} className={css.filterItem}>
               <label>
-                <input
-                  type="checkbox"
-                  name={label}
-                  checked={filters[label] || false}
-                  onChange={handleCheck}
-                />
+                <input type="checkbox" name={label} onChange={handleCheck} />
                 {label}
               </label>
             </li>
