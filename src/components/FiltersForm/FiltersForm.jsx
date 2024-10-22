@@ -3,12 +3,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../../redux/trucks/slicer.js";
 import css from "./FiltersForm.module.css";
-import { selectFilters } from "../../redux/trucks/selectors.js";
+import { selectTrucks } from "../../redux/trucks/selectors.js";
 import { CiMap } from "react-icons/ci";
 
 const FiltersForm = () => {
   const dispatch = useDispatch();
-  const filters = useSelector(selectFilters);
+  const filters = useSelector(selectTrucks);
   console.log(filters);
 
   const handleCheck = (e) => {

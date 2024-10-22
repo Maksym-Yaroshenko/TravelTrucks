@@ -26,6 +26,7 @@ const trucksSlicer = createSlice({
   reducers: {
     setFilter: (state, action) => {
       const { filter, value } = action.payload;
+      console.log(filter);
       state.filters[filter] = value;
     },
   },
