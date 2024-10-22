@@ -1,4 +1,4 @@
-.CamperList {
+.camperList {
   display: grid;
   gap: 16px;
 
@@ -20,13 +20,13 @@
 }
 
 @media screen and (min-width: 768px) {
-  .CamperList {
+  .camperList {
     gap: 24px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .CamperList {
+  .camperList {
     gap: 32px;
   }
 }

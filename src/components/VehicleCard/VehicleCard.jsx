@@ -5,33 +5,33 @@ import css from "./VehicleCard.module.css";
 
 export default function VehicleCard({ truck }) {
   return (
-    <li className={css.VehicleCard}>
-      <div className={css.TruckImage}>
+    <li className={css.vehicleCard}>
+      <div className={css.truckImage}>
         {truck.gallery.length > 0 && (
           <img src={truck.gallery[0].thumb} alt={`${truck.name} image`} />
         )}
       </div>
 
-      <h2 className={css.TruckName}>{truck.name}</h2>
-      <p className={css.TruckPrice}>€{truck.price}</p>
-      <div className={css.TruckRateLoc}>
-        <p className={css.TruckRating}>
-          <a href={`/catalog/${truck.id}`} className={css.TruckRatingLink}>
+      <h2 className={css.truckName}>{truck.name}</h2>
+      <p className={css.truckPrice}>€{truck.price}</p>
+      <div className={css.truckRateLoc}>
+        <p className={css.truckRating}>
+          <a href={`/catalog/${truck.id}`} className={css.truckRatingLink}>
             Rating: {truck.rating}({truck.reviews.length} Reviews)
           </a>
         </p>
-        <p className={css.TruckLocation}>{truck.location}</p>
+        <p className={css.truckLocation}>{truck.location}</p>
       </div>
-      <p className={css.TruckDescription}>{truck.description}</p>
+      <p className={css.truckDescription}>{truck.description}</p>
 
-      <ul className={css.TruckFeatures}>
-        {truck.AC && <li className={css.FeatureItem}>AC</li>}
-        {truck.TV && <li className={css.FeatureItem}>TV</li>}
-        {truck.bathroom && <li className={css.FeatureItem}>Bathroom</li>}
-        {truck.kitchen && <li className={css.FeatureItem}>Kitchen</li>}
+      <ul className={css.truckFeatures}>
+        {truck.AC && <li className={css.featureItem}>AC</li>}
+        {truck.TV && <li className={css.featureItem}>TV</li>}
+        {truck.bathroom && <li className={css.featureItem}>Bathroom</li>}
+        {truck.kitchen && <li className={css.featureItem}>Kitchen</li>}
       </ul>
 
-      <a href={`/catalog/${truck.id}`} className={css.ShowMoreButton}>
+      <a href={`/catalog/${truck.id}`} className={css.showMoreButton}>
         Show more
       </a>
     </li>

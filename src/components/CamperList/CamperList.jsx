@@ -44,12 +44,12 @@ export const CamperList = () => {
   }
 
   return (
-    <ul className={`${css.CamperList}`}>
+    <ul className={`${css.camperList}`}>
       {trucks.slice(0, visibleCount).map((truck) => (
         <VehicleCard key={truck.id} truck={truck} />
       ))}
       {visibleCount < trucks.length && (
-        <button onClick={loadMore} className={css.loadMoreButton}>
+        <button onClick={loadMore} className={css.LoadMoreButton}>
           LoadMore
         </button>
       )}

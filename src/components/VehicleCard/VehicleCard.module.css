@@ -1,4 +1,4 @@
-.VehicleCard {
+.vehicleCard {
   display: grid;
   padding: 16px;
   background-color: var(--white);
@@ -8,32 +8,32 @@
   font-size: 14px;
 }
 
-.TruckImage {
+.truckImage {
   margin-bottom: 16px;
 }
 
-.TruckName {
+.truckName {
   padding-bottom: 10px;
   font-size: 24px;
 }
 
-.TruckPrice {
+.truckPrice {
   font-size: 18px;
   font-weight: 600;
 }
 
-.TruckRateLoc {
+.truckRateLoc {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.TruckRatingLink {
+.truckRatingLink {
   color: var(--main);
   text-decoration: underline;
   cursor: pointer;
 }
 
-.TruckDescription {
+.truckDescription {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -41,7 +41,7 @@
   margin-bottom: 8px;
 }
 
-.TruckFeatures {
+.truckFeatures {
   display: grid;
   gap: 8px;
   font-weight: 500;
@@ -49,14 +49,14 @@
   margin-bottom: 8px;
 }
 
-.FeatureItem {
+.featureItem {
   border-radius: 100px;
   background-color: var(--badges);
   mix-blend-mode: multiply;
   padding: 8px 12px;
 }
 
-.ShowMoreButton {
+.showMoreButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,40 +69,40 @@
   letter-spacing: -0.08px;
 }
 
-.ShowMoreButton:hover {
+.showMoreButton:hover {
   background-color: var(--button-hover);
 }
 
 @media screen and (min-width: 768px) {
 
-  .VehicleCard {
+  .vehicleCard {
     padding: 20px;
     line-height: 1.6em;
     font-size: 16px;
   }
 
-  .TruckName {
+  .truckName {
     line-height: 1.6em;
   }
 
-  .TruckPrice {
+  .truckPrice {
     font-size: 22px;
   }
 
-  .TruckRateLoc {
+  .truckRateLoc {
     grid-template-columns: auto 1fr;
     gap: 16px;
   }
 
-  .TruckDescription {
+  .truckDescription {
     margin-bottom: 16px;
   }
 
-  .TruckFeatures {
+  .truckFeatures {
     margin-bottom: 16px;
   }
 
-  .ShowMoreButton {
+  .showMoreButton {
     font-size: 16px;
     padding: 14px 45px;
   }
@@ -110,24 +110,24 @@
 
 @media screen and (min-width: 1280px) {
 
-  .VehicleCard {
+  .vehicleCard {
     padding: 24px;
     line-height: 2em;
   }
 
-  .TruckPrice {
+  .truckPrice {
     font-size: 24px;
   }
 
-  .TruckDescription {
+  .truckDescription {
     margin-bottom: 24px;
   }
 
-  .TruckFeatures {
+  .truckFeatures {
     margin-bottom: 24px;
   }
 
-  .ShowMoreButton {
+  .showMoreButton {
     padding: 16px 60px;
   }
 }

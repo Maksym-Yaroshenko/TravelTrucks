@@ -5,7 +5,7 @@ import "../../index.css";
 
 export const FiltersForm = () => {
   return (
-    <div className={`${css.FiltersForm}`}>
+    <div className={`${css.filtersForm}`}>
       <h2 className="visually-hidden">Filters</h2>
       <ul>
         <li>Location</li>
