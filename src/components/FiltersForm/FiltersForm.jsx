@@ -1,34 +1,47 @@
 import { useDispatch } from "react-redux";
-import { setFilter } from "../../redux/trucks/slicer.js";
+import { setFilter } from "../../redux/filters/slicer.js";
 import css from "./FiltersForm.module.css";
 import "../../index.css";
 import { CiMap } from "react-icons/ci";
-
-let filtersForm = {
-  AC: false,
-  Automatic: false,
-  Kitchen: false,
-  TV: false,
-  Bathroom: false,
-  Van: false,
-  FullyIntegrated: false,
-  Alcove: false,
-};
+import { useState, useEffect } from "react";
 
 export default function FiltersForm() {
   const dispatch = useDispatch();
 
+  const [filtersForm, setFiltersForm] = useState({
+    AC: false,
+    Automatic: false,
+    Kitchen: false,
+    TV: false,
+    Bathroom: false,
+    Van: false,
+    FullyIntegrated: false,
+    Alcove: false,
+  });
+
   const handleCheck = (e) => {
     const { name, checked } = e.target;
 
-    filtersForm = { ...filtersForm, [name]: checked };
+    const formattedName = name.replace(/\s+/g, "");
 
-    dispatch(setFilter(filtersForm));
+    setFiltersForm((prevFilters) => {
+      const updatedFiltersForm = {
+        ...prevFilters,
+        [formattedName]: checked,
+      };
+
+      dispatch(setFilter(updatedFiltersForm));
+
+      return updatedFiltersForm;
+    });
   };
+
+  useEffect(() => {
+    console.log(filtersForm);
+  }, [filtersForm]);
 
   const equipmentLabels = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
   const typeLabels = ["Van", "Fully Integrated", "Alcove"];
-
   return (
     <div className={css.filtersForm}>
       <h2 className="visually-hidden">Filters</h2>
@@ -45,12 +58,18 @@ export default function FiltersForm() {
         <legend className={css.typeFilter}>Vehicle equipment</legend>
         <ul className={css.filterList}>
           {equipmentLabels.map((label) => (
-            <div key={label} className={css.filterItem}>
-              <label>
-                <input type="checkbox" name={label} onChange={handleCheck} />
+            <li key={label} className={css.filterItem}>
+              <label htmlFor={label}>
+                <input
+                  type="checkbox"
+                  id={label}
+                  name={label}
+                  checked={filtersForm[label.replace(/\s+/g, "")]}
+                  onChange={handleCheck}
+                />
                 {label}
               </label>
-            </div>
+            </li>
           ))}
         </ul>
       </fieldset>
@@ -60,8 +79,14 @@ export default function FiltersForm() {
         <ul className={css.filterList}>
           {typeLabels.map((label) => (
             <li key={label} className={css.filterItem}>
-              <label>
-                <input type="checkbox" name={label} onChange={handleCheck} />
+              <label htmlFor={label}>
+                <input
+                  type="checkbox"
+                  id={label}
+                  name={label}
+                  checked={filtersForm[label.replace(/\s+/g, "")]}
+                  onChange={handleCheck}
+                />
                 {label}
               </label>
             </li>

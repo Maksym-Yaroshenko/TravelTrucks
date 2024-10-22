@@ -8,29 +8,11 @@ export const initialState = {
   items: [],
   error: null,
   isLoading: false,
-  filters: {
-    AC: false,
-    Automatic: false,
-    Kitchen: false,
-    TV: false,
-    Bathroom: false,
-    Van: false,
-    FullyIntegrated: false,
-    Alcove: false,
-  },
 };
 
 const trucksSlicer = createSlice({
   name: "trucks",
   initialState,
-  reducers: {
-    setFilter: (state, action) => {
-      console.log(action.payload);
-      state.filters = action.payload;
-
-      // state.filters[filter] = value;
-    },
-  },
   extraReducers: (builder) => {
     builder
       .addCase(getTrucks.pending, (state) => {
@@ -50,5 +32,4 @@ const trucksSlicer = createSlice({
   },
 });
 
-export const { setFilter } = trucksSlicer.actions;
 export default trucksSlicer.reducer;

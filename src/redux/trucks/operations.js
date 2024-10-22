@@ -1,4 +1,4 @@
-// src/redux/trucks/operations.js
+// src/redux/filters/operations.js
 
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
