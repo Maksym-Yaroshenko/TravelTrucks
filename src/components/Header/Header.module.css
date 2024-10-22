@@ -1,52 +1,51 @@
 header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    position: relative;
-    background-color: var(--inputs);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  position: relative;
+  background-color: var(--inputs);
 }
 
 .divLogo {
-    grid-column: 1 / 2 ;
-    justify-content: start;
-    padding-left: 24px;
-    margin-right: 30px;
+  grid-column: 1 / 2;
+  justify-content: start;
+  padding-left: 24px;
+  margin-right: 30px;
 }
 
 .logo {
-    color: var(--main);
-    font-weight: 800;
+  color: var(--main);
+  font-weight: 800;
 }
 
 .logoSpan {
-    color: var(--text);
+  color: var(--text);
 }
 
 .linkItem {
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    color: var(--main);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--main);
 
-    padding-top: 24px;
-    padding-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .linkItem.active {
-    color: var(--button-hover)
+  color: var(--button-hover);
 }
 
 @media screen and (min-width: 768px) {
-    .header {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-
+  .header {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .header {
-        padding-left: 64px;
-        padding-right: 64px;
-    }
+  .header {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 }

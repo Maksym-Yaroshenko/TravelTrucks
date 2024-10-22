@@ -1,66 +1,64 @@
 .homeSection {
-    background-image: url("../../images/HomePicture.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+  background-image: url("../../images/HomePicture.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1280px),
-screen and (min-resolution: 2dppx) and (min-width: 1280px),
-screen and (min-devace-pixel-ratio: 2) and (min-width: 1280px) {
-    .homeSection {
-        background-image: url("../../images/HomePicture@2x.jpg");
-    }
+  screen and (min-resolution: 2dppx) and (min-width: 1280px),
+  screen and (min-devace-pixel-ratio: 2) and (min-width: 1280px) {
+  .homeSection {
+    background-image: url("../../images/HomePicture@2x.jpg");
+  }
 }
 
-
-
 .h1Text {
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 66.67%;
-    color: var(--inputs);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 66.67%;
+  color: var(--inputs);
 
-    margin-top: 260px;
-    margin-bottom: 16px;
+  margin-top: 260px;
+  margin-bottom: 16px;
 }
 
 .h3Text {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 133.33%;
-    color: var(--inputs);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.33%;
+  color: var(--inputs);
 
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .vievNowBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 173px;
-    height: 56px;
+  width: 173px;
+  height: 56px;
 
-    background-color: var(--button);
-    border: 0;
-    border-radius: 200px;
+  background-color: var(--button);
+  border: 0;
+  border-radius: 200px;
 
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: -0.005em;
-    color: var(--white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.005em;
+  color: var(--white);
 
-    transition: background-color 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out;
 }
 
 .vievNowBtn:hover {
-    background-color: var(--button-hover);
+  background-color: var(--button-hover);
 }

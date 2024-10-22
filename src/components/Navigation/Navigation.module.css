@@ -1,27 +1,27 @@
 .navigationList {
-    grid-column: 2 / 3;
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    padding: 24px 0px 24px 0;
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding: 24px 0px 24px 0;
 }
 
 .linkItem {
-    font-weight: 500;
-    line-height: 150%;
-    color: var(--main);
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--main);
 }
 
 .linkItem:hover {
-    color: var(--button-hover);
+  color: var(--button-hover);
 }
 
 .linkItem.active {
-    color: var(--button-hover);
+  color: var(--button-hover);
 }
 
 @media screen and (min-width: 768px) {
-    .navigationList {
-        gap: 32px;
-    }
+  .navigationList {
+    gap: 32px;
+  }
 }

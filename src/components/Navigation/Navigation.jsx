@@ -11,27 +11,27 @@ export default function Navigation() {
   // const isLoggedIn = useSelector(selectisLoggedIn);
 
   return (
-      <nav>
-        <ul className={css.navigationList}>
-          <li>
-            <NavLink
-              className={`${css.linkItem} ${pathname === "/" && css.active}`}
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={`${css.linkItem} ${
-                pathname === "/catalog" && css.active
-              }`}
-              to="/catalog"
-            >
-              Catalog
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+    <nav>
+      <ul className={css.navigationList}>
+        <li>
+          <NavLink
+            className={`${css.linkItem} ${pathname === "/" && css.active}`}
+            to="/"
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={`${css.linkItem} ${
+              pathname === "/catalog" && css.active
+            }`}
+            to="/catalog"
+          >
+            Catalog
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 }

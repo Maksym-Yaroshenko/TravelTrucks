@@ -1,29 +1,36 @@
+// src/redux/trucks/slicer.js
+
 import { createSlice } from "@reduxjs/toolkit";
 import { getTrucks } from "./operations.js";
 
 export const initialState = {
-  // trucks: {
-  //   id: null,
-  //   name: null,
-  //   description: null,
-  //   price: null,
-  //   location: null,
-  //   transmission: null,
-  //   form: null,
-  //   AC: false,
-  //   TV: false,
-  //   bathroom: false,
-  //   kitchen: false,
-  // },
   total: null,
   items: [],
   error: null,
   isLoading: false,
+  filters: {
+    AC: false,
+    Automatic: false,
+    Kitchen: false,
+    TV: false,
+    Bathroom: false,
+    Van: false,
+    FullyIntegrated: false,
+    Alcove: false,
+  },
 };
 
 const trucksSlicer = createSlice({
   name: "trucks",
   initialState,
+  reducers: {
+    setFilter: (state, action) => {
+      console.log(action.payload);
+      state.filters = action.payload;
+
+      // state.filters[filter] = value;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getTrucks.pending, (state) => {
@@ -33,8 +40,6 @@ const trucksSlicer = createSlice({
       .addCase(getTrucks.fulfilled, (state, action) => {
         state.error = false;
         state.isLoading = false;
-
-        console.log(action.payload.items);
         state.total = action.payload.total;
         state.items = action.payload.items;
       })
@@ -45,4 +50,5 @@ const trucksSlicer = createSlice({
   },
 });
 
+export const { setFilter } = trucksSlicer.actions;
 export default trucksSlicer.reducer;
