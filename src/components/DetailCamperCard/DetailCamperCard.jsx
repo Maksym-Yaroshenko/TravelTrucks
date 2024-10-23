@@ -2,10 +2,9 @@ import { useSelector } from "react-redux";
 import { selectTrucks } from "../../redux/trucks/selectors.js";
 import "../../index.css";
 import css from "./DetailCamperCard.module.css";
-import {
-  useParams,
-  // Link,
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 
 export default function DetailCamperCard() {
   const { camperId } = useParams();
@@ -15,20 +14,7 @@ export default function DetailCamperCard() {
     <>
       <h2 className="visually-hidden">Info truck card</h2>
       <h3 className={css.truckName}>{truck.name}</h3>
-      <div className={css.truckRateLoc}>
-        <p className={css.truckRating}>
-          {/* <Link
-            className={css.truckRatingLink}
-            to={`/catalog/${truck.id}/reviews`}
-            >
-            Rating: {truck.rating}({truck.reviews.length} Reviews)
-            </Link> */}
-        </p>
-        <p>
-          Rating: {truck.rating}({truck.reviews.length} Reviews)
-        </p>
-        <p className={css.truckLocation}>{truck.location}</p>
-      </div>
+      <MenuTruckRateLoc truck={truck} to={`/catalog/${truck.id}`} />
 
       <p className={css.truckPrice}>€{truck.price}</p>
 

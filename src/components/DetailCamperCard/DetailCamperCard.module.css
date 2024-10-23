@@ -1,15 +1,46 @@
-.truckRateLoc {
-    display: flex;
+.truckName {
+    color: var(--main);
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.33%;
+
+    margin-bottom: 8px;
+}
+
+
+
+.truckPrice {
+    color: var(--main);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.33%;
+
+    margin-bottom: 28px;
 }
 
 .imgList {
     display: flex;
     gap: 48px;
     flex-wrap: wrap;
+
+    margin-bottom: 28px;
 }
 
 .imgItem {
     width: 292px;
     height: 312px;
     object-fit: cover;
+    border-radius: 10px;
+}
+
+.truckDescription {
+    color: var(--text);
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
 }

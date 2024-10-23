@@ -22,16 +22,16 @@
   font-weight: 600;
 }
 
-.truckRateLoc {
+/* .truckRateLoc {
   display: grid;
   grid-template-columns: 1fr;
-}
+} */
 
-.truckRatingLink {
+/* .truckRatingLink {
   color: var(--main);
   text-decoration: underline;
   cursor: pointer;
-}
+} */
 
 .truckDescription {
   overflow: hidden;
@@ -90,10 +90,10 @@
     font-size: 22px;
   }
 
-  .truckRateLoc {
+  /* .truckRateLoc {
     grid-template-columns: auto 1fr;
     gap: 16px;
-  }
+  } */
 
   .truckDescription {
     margin-bottom: 16px;
