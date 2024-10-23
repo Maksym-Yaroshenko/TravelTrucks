@@ -3,7 +3,7 @@ import { setFilter } from "../../redux/filters/slicer.js";
 import css from "./FiltersForm.module.css";
 import "../../index.css";
 import { CiMap } from "react-icons/ci";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function FiltersForm() {
   const dispatch = useDispatch();
@@ -35,10 +35,6 @@ export default function FiltersForm() {
       return updatedFiltersForm;
     });
   };
-
-  useEffect(() => {
-    console.log(filtersForm);
-  }, [filtersForm]);
 
   const equipmentLabels = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
   const typeLabels = ["Van", "Fully Integrated", "Alcove"];

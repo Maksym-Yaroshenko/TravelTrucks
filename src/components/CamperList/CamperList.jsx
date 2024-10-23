@@ -42,9 +42,9 @@ export default function CamperList() {
 
   return (
     <ul className={css.camperList}>
-      {trucks.slice(0, visibleCount).map((truck) => (
+      {trucks.slice(0, visibleCount).map((truck, id) => (
         <li key={truck.id}>
-          <VehicleCard truck={truck} />
+          <VehicleCard id={id} />
         </li>
       ))}
       {visibleCount < trucks.length && (

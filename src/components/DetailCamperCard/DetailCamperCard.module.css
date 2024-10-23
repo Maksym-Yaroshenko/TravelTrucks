@@ -1,0 +1,15 @@
+.truckRateLoc {
+    display: flex;
+}
+
+.imgList {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.imgItem {
+    width: 292px;
+    height: 312px;
+    object-fit: cover;
+}

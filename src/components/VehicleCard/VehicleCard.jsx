@@ -1,8 +1,13 @@
-import PropTypes from "prop-types";
 import css from "./VehicleCard.module.css";
 import "../../index.css";
+import { useSelector } from "react-redux";
+import { selectTrucks } from "../../redux/trucks/selectors.js";
+import { Link } from "react-router-dom";
 
-export default function VehicleCard({ truck }) {
+// eslint-disable-next-line react/prop-types
+export default function VehicleCard({ id }) {
+  const truck = useSelector(selectTrucks)[id];
+
   return (
     <div className={css.vehicleCard}>
       <h2 className="visually-hidden">Trucks List</h2>
@@ -16,9 +21,9 @@ export default function VehicleCard({ truck }) {
       <p className={css.truckPrice}>€{truck.price}</p>
       <div className={css.truckRateLoc}>
         <p className={css.truckRating}>
-          <a href={`/catalog/${truck.id}`} className={css.truckRatingLink}>
+          <Link className={css.truckRatingLink} to={`/catalog/${truck.id}`}>
             Rating: {truck.rating}({truck.reviews.length} Reviews)
-          </a>
+          </Link>
         </p>
         <p className={css.truckLocation}>{truck.location}</p>
       </div>
@@ -32,37 +37,37 @@ export default function VehicleCard({ truck }) {
       </ul>
 
       <div className={css.showMoreButtonContainer}>
-        <a href={`/catalog/${truck.id}`} className={css.showMoreButton}>
+        <Link className={css.showMoreButton} to={`/catalog/${truck.id}`}>
           Show more
-        </a>
+        </Link>
       </div>
     </div>
   );
 }
 
-VehicleCard.propTypes = {
-  truck: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    rating: PropTypes.number.isRequired,
-    reviews: PropTypes.arrayOf(
-      PropTypes.shape({
-        reviewer_name: PropTypes.string,
-        reviewer_rating: PropTypes.number,
-        comment: PropTypes.string,
-      })
-    ).isRequired,
-    description: PropTypes.string.isRequired,
-    AC: PropTypes.bool,
-    TV: PropTypes.bool,
-    bathroom: PropTypes.bool,
-    kitchen: PropTypes.bool,
-    gallery: PropTypes.arrayOf(
-      PropTypes.shape({
-        thumb: PropTypes.string,
-      })
-    ).isRequired,
-    id: PropTypes.string.isRequired,
-  }).isRequired,
-};
+// VehicleCard.propTypes = {
+//   truck: PropTypes.shape({
+//     name: PropTypes.string.isRequired,
+//     location: PropTypes.string.isRequired,
+//     price: PropTypes.number.isRequired,
+//     rating: PropTypes.number.isRequired,
+//     reviews: PropTypes.arrayOf(
+//       PropTypes.shape({
+//         reviewer_name: PropTypes.string,
+//         reviewer_rating: PropTypes.number,
+//         comment: PropTypes.string,
+//       })
+//     ).isRequired,
+//     description: PropTypes.string.isRequired,
+//     AC: PropTypes.bool,
+//     TV: PropTypes.bool,
+//     bathroom: PropTypes.bool,
+//     kitchen: PropTypes.bool,
+//     gallery: PropTypes.arrayOf(
+//       PropTypes.shape({
+//         thumb: PropTypes.string,
+//       })
+//     ).isRequired,
+//     id: PropTypes.string.isRequired,
+//   }).isRequired,
+// };
