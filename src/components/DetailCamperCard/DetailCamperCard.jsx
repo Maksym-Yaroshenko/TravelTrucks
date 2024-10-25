@@ -21,7 +21,7 @@ export default function DetailCamperCard() {
       {truck.gallery.length > 0 && (
         <ul className={css.imgList}>
           {truck.gallery.map((img, id) => (
-            <li key={id}>
+            <li className={css.li} key={id}>
               <img
                 className={css.imgItem}
                 src={img.thumb}

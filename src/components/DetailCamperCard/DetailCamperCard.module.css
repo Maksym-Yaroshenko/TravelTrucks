@@ -23,18 +23,49 @@
 
 .imgList {
     display: flex;
-    gap: 48px;
+    gap: 24px;
     flex-wrap: wrap;
 
     margin-bottom: 28px;
 }
 
 .imgItem {
-    width: 292px;
-    height: 312px;
     object-fit: cover;
     border-radius: 10px;
+    height: 312px;
+    /* min-width: 292px; */
 }
+
+
+
+@media screen and (min-width: 768px) {
+    .imgList {
+        gap: 36px;
+    }
+
+    .li {
+        width: calc((100% - 2 * 36px) / 2);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .imgList {
+        gap: 48px;
+    }
+
+    .li {
+        width: calc((100% - 3 * 48px) / 3);
+    }
+}
+
+@media screen and (min-width: 1936px) {
+    .imgItem {
+        height: 100%;
+    }
+}
+
+
+
 
 .truckDescription {
     color: var(--text);
