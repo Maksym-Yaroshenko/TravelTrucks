@@ -1,10 +1,12 @@
+// src/components/FiltersForm/FiltersForm.jsx
+
 import { useDispatch } from "react-redux";
 import { setFilter } from "../../redux/filters/slicer.js";
 import css from "./FiltersForm.module.css";
 import "../../index.css";
 import { CiMap } from "react-icons/ci";
 import { useState } from "react";
-import sprite from "../../images/icons.svg"
+import sprite from "../../images/icons.svg";
 
 export default function FiltersForm() {
   const dispatch = useDispatch();
@@ -38,7 +40,7 @@ export default function FiltersForm() {
 
   const equipmentLabels = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
   const typeLabels = ["Van", "Fully Integrated", "Alcove"];
-  
+
   return (
     <div className={css.filtersForm}>
       <h2 className="visually-hidden">Filters</h2>
@@ -64,10 +66,12 @@ export default function FiltersForm() {
                   checked={filtersForm[label.replace(/\s+/g, "")]}
                   onChange={handleCheck}
                 />
-                <svg className={css.icon}>
-                  <use xlinkHref={`${sprite}#${label}`} />
-                </svg>
-                {label}
+                <div className={css.iconAndText}>
+                  <svg className={css.filterItemIcon}>
+                    <use xlinkHref={`${sprite}#${label}`} />
+                  </svg>
+                  {label}
+                </div>
               </label>
             </li>
           ))}
@@ -87,10 +91,12 @@ export default function FiltersForm() {
                   checked={filtersForm[label.replace(/\s+/g, "")]}
                   onChange={handleCheck}
                 />
-                <svg className={css.icon}>
-                  <use xlinkHref={`${sprite}#${label}`} />
-                </svg>
-                {label}
+                <div className={css.iconAndText}>
+                  <svg className={css.filterItemIcon}>
+                    <use xlinkHref={`${sprite}#${label}`} />
+                  </svg>
+                  {label}
+                </div>
               </label>
             </li>
           ))}

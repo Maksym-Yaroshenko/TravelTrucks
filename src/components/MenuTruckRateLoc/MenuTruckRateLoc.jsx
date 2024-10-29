@@ -1,3 +1,5 @@
+// src/components/MenuTruckRateLoc/MenuTruckRateLoc.jsx
+
 /* eslint-disable react/prop-types */
 import css from "./MenuTruckRateLoc.module.css";
 import Icon from "../../images/icons.svg";

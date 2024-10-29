@@ -1,3 +1,6 @@
+// src/components/VehicleCard/VehicleCard.jsx
+
+
 import css from "./VehicleCard.module.css";
 import "../../index.css";
 import { useSelector } from "react-redux";

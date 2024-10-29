@@ -1,3 +1,5 @@
+// src/components/Layout/Layout.jsx
+
 import css from "./Layout.module.css";
 import Header from "../Header/Header.jsx";
 // import { useSelector } from "react-redux";
