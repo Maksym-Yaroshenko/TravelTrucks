@@ -109,6 +109,7 @@
   background-color: var(--button);
   color: var(--white);
   font-size: 14px;
+  user-select: none;
 }
 
 .searchButton:hover {
