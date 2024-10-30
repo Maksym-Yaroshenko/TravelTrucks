@@ -1,3 +1,5 @@
+// src/components/CamperList/CamperList.jsx
+
 import css from "./CamperList.module.css";
 import { useEffect, useState } from "react";
 import { getTrucks } from "../../redux/trucks/operations.js";

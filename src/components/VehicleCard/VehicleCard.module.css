@@ -10,11 +10,24 @@
 
 .truckImage {
   margin-bottom: 16px;
+  user-select: none;
+}
+
+.truckHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; 
 }
 
 .truckName {
-  padding-bottom: 10px;
   font-size: 24px;
+}
+
+.truckPriceContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .truckPrice {
@@ -47,13 +60,22 @@
   font-weight: 500;
   grid-template-columns: repeat(auto-fit, minmax(0, max-content));
   margin-bottom: 8px;
+  user-select: none;
 }
 
 .featureItem {
+  display: flex;
+  align-items: center;
   border-radius: 100px;
   background-color: var(--badges);
   mix-blend-mode: multiply;
-  padding: 8px 12px;
+  padding: 12px 18px;
+}
+
+.featureIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 
 .showMoreButtonContainer {
@@ -69,6 +91,7 @@
   color: var(--white);
   font-size: 14px;
   letter-spacing: -0.08px;
+  user-select: none;
 }
 
 .showMoreButton:hover {
