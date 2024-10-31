@@ -1,6 +1,5 @@
 // src/components/DetailCamperCard/DetailCamperCard.jsx
 
-
 import { useSelector } from "react-redux";
 import { selectTrucks } from "../../redux/trucks/selectors.js";
 import "../../index.css";

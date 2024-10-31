@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { setFilter } from "../../redux/filters/slicer.js";
 import css from "./FiltersForm.module.css";
 import "../../index.css";
-import { CiMap } from "react-icons/ci";
 import { useState } from "react";
 import sprite from "../../images/icons.svg";
 
@@ -48,7 +47,14 @@ export default function FiltersForm() {
       <div className={css.locationContainer}>
         <p className={css.locationTitle}>Location</p>
         <p className={css.locationContent}>
-          <CiMap size={20} />
+          <svg
+            // className={css.iconMap}
+            width="20"
+            height="20"
+            aria-label="icon-map"
+          >
+            <use href={`${sprite}#icon-map`}></use>
+          </svg>
           <span>Kyiv, Ukraine</span>
         </p>
       </div>
