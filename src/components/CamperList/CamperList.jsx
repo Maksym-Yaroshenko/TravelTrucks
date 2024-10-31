@@ -11,6 +11,7 @@ import {
   selectIsLoading,
   selectError,
 } from "../../redux/trucks/selectors.js";
+import { selectFilters } from "../../redux/filters/selectors.js";
 
 export default function CamperList() {
   const dispatch = useDispatch();
@@ -18,17 +19,50 @@ export default function CamperList() {
   const trucks = useSelector(selectTrucks);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+  const filters = useSelector(selectFilters);
+
   const [visibleCount, setVisibleCount] = useState(4);
 
   useEffect(() => {
     dispatch(getTrucks());
   }, [dispatch]);
 
+  const filterTrucks = (trucks, filters) => {
+    return trucks.filter((truck) => {
+      return Object.entries(filters).every(([key, value]) => {
+        if (!value) return true;
+
+        const filterKeyMap = {
+          AC: "AC",
+          Automatic: "transmission",
+          Bathroom: "bathroom",
+          Kitchen: "kitchen",
+          TV: "TV",
+          Van: "form",
+          FullyIntegrated: "form",
+          Alcove: "form",
+        };
+
+        const truckKey = filterKeyMap[key];
+        const truckValue = truck[truckKey];
+
+        if (key === "Automatic") return truckValue === "automatic";
+        if (key === "Van") return truckValue === "van";
+        if (key === "FullyIntegrated") return truckValue === "fully integrated";
+        if (key === "Alcove") return truckValue === "alcove";
+
+        return truckValue === true;
+      });
+    });
+  };
+
+  const filteredTrucks = filterTrucks(trucks, filters);
+
   const loadMore = () => {
     const nextCount = visibleCount + 4;
 
-    if (nextCount >= trucks.length) {
-      setVisibleCount(trucks.length);
+    if (nextCount >= filteredTrucks.length) {
+      setVisibleCount(filteredTrucks.length);
     } else {
       setVisibleCount(nextCount);
     }
@@ -44,12 +78,12 @@ export default function CamperList() {
 
   return (
     <ul className={css.camperList}>
-      {trucks.slice(0, visibleCount).map((truck, id) => (
+      {filteredTrucks.slice(0, visibleCount).map((truck) => (
         <li key={truck.id}>
-          <VehicleCard id={id} />
+          <VehicleCard truck={truck} />
         </li>
       ))}
-      {visibleCount < trucks.length && (
+      {visibleCount < filteredTrucks.length && (
         <li className={css.loadMoreButtonContainer}>
           <button onClick={loadMore} className={css.loadMoreButton}>
             Load More
