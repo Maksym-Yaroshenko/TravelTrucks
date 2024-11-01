@@ -25,16 +25,14 @@ export default function FiltersForm() {
     const { name, checked } = e.target;
     const formattedName = name.replace(/\s+/g, "");
 
-    setFiltersForm((prevFilters) => {
-      const updatedFiltersForm = {
-        ...prevFilters,
-        [formattedName]: checked,
-      };
+    setFiltersForm((prevFilters) => ({
+      ...prevFilters,
+      [formattedName]: checked,
+    }));
+  };
 
-      dispatch(setFilter(updatedFiltersForm));
-
-      return updatedFiltersForm;
-    });
+  const handleSearch = () => {
+    dispatch(setFilter(filtersForm));
   };
 
   const equipmentLabels = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
@@ -110,7 +108,11 @@ export default function FiltersForm() {
       </fieldset>
 
       <div className={css.searchButtonContainer}>
-        <button type="button" className={css.searchButton}>
+        <button
+          type="button"
+          onClick={handleSearch}
+          className={css.searchButton}
+        >
           Search
         </button>
       </div>

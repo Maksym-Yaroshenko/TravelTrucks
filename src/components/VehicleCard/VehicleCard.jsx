@@ -1,22 +1,20 @@
 // src/components/VehicleCard/VehicleCard.jsx
 
+import PropTypes from "prop-types";
 import css from "./VehicleCard.module.css";
 import "../../index.css";
-import { useSelector } from "react-redux";
-import { selectTrucks } from "../../redux/trucks/selectors.js";
 import { Link } from "react-router-dom";
-import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 import sprite from "../../images/icons.svg";
+import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 
-// eslint-disable-next-line react/prop-types
-export default function VehicleCard({ id }) {
-  const truck = useSelector(selectTrucks)[id];
+export default function VehicleCard({ truck }) {
+  if (!truck) return null;
 
   return (
     <div className={css.vehicleCard}>
       <h2 className="visually-hidden">Trucks List</h2>
       <div className={css.truckImage}>
-        {truck.gallery.length > 0 && (
+        {truck.gallery && truck.gallery.length > 0 && (
           <img src={truck.gallery[0].thumb} alt={`${truck.name} image`} />
         )}
       </div>
@@ -77,3 +75,21 @@ export default function VehicleCard({ id }) {
     </div>
   );
 }
+
+VehicleCard.propTypes = {
+  truck: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.string,
+    gallery: PropTypes.arrayOf(
+      PropTypes.shape({
+        thumb: PropTypes.string.isRequired,
+      })
+    ),
+    AC: PropTypes.bool,
+    TV: PropTypes.bool,
+    bathroom: PropTypes.bool,
+    kitchen: PropTypes.bool,
+  }).isRequired,
+};
