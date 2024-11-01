@@ -73,7 +73,6 @@
   /* width: 16px;
   height: 16px; */
   border: 2px solid var(--light-gray);
-  border-radius: 4px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
