@@ -6,7 +6,6 @@ import Icon from "../../images/icons.svg";
 import { Link } from "react-router-dom";
 
 export default function MenuTruckRateLoc({ truck, to }) {
-  console.log(to);
   return (
     <ul className={css.menuTruckRateLoc}>
       <li className={css.itemTruckRateLoc}>

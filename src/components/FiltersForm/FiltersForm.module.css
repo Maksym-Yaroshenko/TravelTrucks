@@ -67,24 +67,36 @@
   display: none;
 }
 
-.filterItem input[type="checkbox"] + label::before {
+.filterItem input[type="checkbox"]+label {
   content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+  /* display: inline-block; */
+  /* width: 16px;
+  height: 16px; */
   border: 2px solid var(--light-gray);
   border-radius: 4px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.filterItem input[type="checkbox"]:checked + label {
-  border: 1px solid var(--button);
+.filterItem input[type="checkbox"]:checked+label {
+  border: 2px solid var(--button);
 }
 
-.filterItem input[type="checkbox"]:checked + label::before {
-  background-color: var(--button);
+.filterItem input[type="checkbox"]:checked+label {
+  /* background-color: var(--button); */
   border-color: var(--button);
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .typeFilter {
   color: var(--main);

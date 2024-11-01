@@ -1,25 +1,18 @@
 // src/components/FiltersForm/FiltersForm.jsx
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../../redux/filters/slicer.js";
 import css from "./FiltersForm.module.css";
 import "../../index.css";
 import { useState } from "react";
 import sprite from "../../images/icons.svg";
+import { selectFilters } from "../../redux/filters/selectors.js";
 
 export default function FiltersForm() {
   const dispatch = useDispatch();
+  const shapeValuesFromSlicer = useSelector(selectFilters);
 
-  const [filtersForm, setFiltersForm] = useState({
-    AC: false,
-    Automatic: false,
-    Kitchen: false,
-    TV: false,
-    Bathroom: false,
-    Van: false,
-    FullyIntegrated: false,
-    Alcove: false,
-  });
+  const [filtersForm, setFiltersForm] = useState(shapeValuesFromSlicer);
 
   const handleCheck = (e) => {
     const { name, checked } = e.target;
@@ -62,14 +55,17 @@ export default function FiltersForm() {
         <ul className={css.filterList}>
           {equipmentLabels.map((label) => (
             <li key={label} className={css.filterItem}>
+              <input
+                className={css.input}
+                type="checkbox"
+                id={label}
+                name={label}
+                value="true"
+                checked={filtersForm[label.replace(/\s+/g, "")]}
+                onChange={handleCheck}
+              />
+
               <label htmlFor={label}>
-                <input
-                  type="checkbox"
-                  id={label}
-                  name={label}
-                  checked={filtersForm[label.replace(/\s+/g, "")]}
-                  onChange={handleCheck}
-                />
                 <div className={css.iconAndText}>
                   <svg className={css.filterItemIcon}>
                     <use xlinkHref={`${sprite}#${label}`} />
@@ -87,14 +83,15 @@ export default function FiltersForm() {
         <ul className={css.filterList}>
           {typeLabels.map((label) => (
             <li key={label} className={css.filterItem}>
+              <input
+                type="checkbox"
+                id={label}
+                name={label}
+                value="true"
+                checked={filtersForm[label.replace(/\s+/g, "")]}
+                onChange={handleCheck}
+              />
               <label htmlFor={label}>
-                <input
-                  type="checkbox"
-                  id={label}
-                  name={label}
-                  checked={filtersForm[label.replace(/\s+/g, "")]}
-                  onChange={handleCheck}
-                />
                 <div className={css.iconAndText}>
                   <svg className={css.filterItemIcon}>
                     <use xlinkHref={`${sprite}#${label}`} />
