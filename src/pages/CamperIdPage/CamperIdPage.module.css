@@ -1,3 +1,10 @@
-.CamperIdPage {
+.CamperDetailedDescription {
     padding-top: 48px;
+    padding-bottom: 0;
+    margin-bottom: 60px;
+}
+
+.CamperDetailedInfo {
+    padding-top: 0;
+    padding-bottom: 80px;
 }

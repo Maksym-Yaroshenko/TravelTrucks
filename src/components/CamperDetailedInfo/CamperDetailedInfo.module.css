@@ -1,0 +1,43 @@
+.camperDetailedInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 16px;
+}
+
+.tabButton {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--main);
+    background-color: transparent;
+    padding: 0 0 24px 0;
+}
+
+.tabButton.active {
+    border-bottom: 5px solid var(--button-hover);
+}
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.leftContent {
+    flex: 1;
+}
+
+.rightContent {
+    width: 100%;
+}
+
+.bookingForm {
+    padding: 16px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+}
