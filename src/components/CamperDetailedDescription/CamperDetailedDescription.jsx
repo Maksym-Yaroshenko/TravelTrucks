@@ -1,14 +1,14 @@
-// src/components/DetailCamperCard/DetailCamperCard.jsx
+// src/components/CamperDetailedDescription/CamperDetailedDescription.jsx
 
 import { useSelector } from "react-redux";
 import { selectTrucks } from "../../redux/trucks/selectors.js";
 import "../../index.css";
-import css from "./DetailCamperCard.module.css";
+import css from "./CamperDetailedDescription.module.css";
 import { useParams } from "react-router-dom";
 
 import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 
-export default function DetailCamperCard() {
+export default function CamperDetailedDescription() {
   const { camperId } = useParams();
   const truck = useSelector(selectTrucks)[camperId - 1];
   console.log(truck);
