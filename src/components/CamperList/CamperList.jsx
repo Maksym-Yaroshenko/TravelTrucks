@@ -78,7 +78,7 @@ export default function CamperList() {
   return (
     <ul className={css.camperList}>
       {filteredTrucks.slice(0, visibleCount).map((truck) => (
-        <li key={truck.id}>
+        <li className={css.card} key={truck.id}>
           <VehicleCard truck={truck} />
         </li>
       ))}

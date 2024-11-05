@@ -14,13 +14,17 @@ export default function CamperDetailedInfo() {
     <div className={css.camperDetailedInfo}>
       <div className={css.tabs}>
         <button
-          className={`${css.tabButton} ${activeTab === "features" ? css.active : ""}`}
+          className={`${css.tabButton} ${
+            activeTab === "features" ? css.active : ""
+          }`}
           onClick={() => setActiveTab("features")}
         >
           Features
         </button>
         <button
-          className={`${css.tabButton} ${activeTab === "reviews" ? css.active : ""}`}
+          className={`${css.tabButton} ${
+            activeTab === "reviews" ? css.active : ""
+          }`}
           onClick={() => setActiveTab("reviews")}
         >
           Reviews
@@ -28,9 +32,7 @@ export default function CamperDetailedInfo() {
       </div>
 
       <div className={css.contentContainer}>
-        <div className={css.leftContent}>
-          {activeTab === "features" ? <CamperFeatures /> : <CamperReviews />}
-        </div>
+        {activeTab === "features" ? <CamperFeatures /> : <CamperReviews />}
 
         <div className={css.rightContent}>
           <CamperForm />

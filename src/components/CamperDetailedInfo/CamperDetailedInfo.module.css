@@ -35,9 +35,3 @@
 .rightContent {
     width: 100%;
 }
-
-.bookingForm {
-    padding: 16px;
-    background-color: var(--light-gray);
-    border-radius: 8px;
-}

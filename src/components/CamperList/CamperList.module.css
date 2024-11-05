@@ -3,6 +3,10 @@
   gap: 16px;
 }
 
+.card {
+  max-width: 888px;
+}
+
 .loadMoreButtonContainer {
   display: flex;
   justify-content: center;
