@@ -10,6 +10,7 @@ import {
 import css from "./CamperReviews.module.css";
 import PropTypes from "prop-types";
 import "../../index.css";
+import Loader from "../Loader/Loader.jsx";
 
 export default function CamperReviews({ camperId }) {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ export default function CamperReviews({ camperId }) {
     dispatch(fetchReviews(camperId));
   }, [dispatch, camperId]);
 
-  if (isLoading) return <p>Loading reviews...</p>;
+  if (isLoading) return <Loader />;;
   if (error) return <p>Error loading reviews: {error}</p>;
 
   return (
