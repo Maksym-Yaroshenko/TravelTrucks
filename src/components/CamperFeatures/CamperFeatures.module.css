@@ -1,29 +1,32 @@
 .container {
-  gap: 100px;
-  width: 631px;
-  align-items: center;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    gap: 100px;
+    /* width: 631px; */
+    align-items: center;
 
-  border-radius: 10px;
-  background: var(--inputs, #f7f7f7);
+    border-radius: 10px;
+    background: var(--inputs, #F7F7F7);
 
-  padding: 44px 52px;
+    padding: 44px 52px;
 }
 
 .menuIcons {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 .menuItemIcon {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-radius: 100px;
-  background: var(--badges);
-  mix-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--badges);
+    mix-blend-mode: multiply;
 
-  padding: 12px 18px;
+    padding: 12px 18px;
 }
