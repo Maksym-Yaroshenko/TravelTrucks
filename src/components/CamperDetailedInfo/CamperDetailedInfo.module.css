@@ -1,37 +1,40 @@
 .camperDetailedInfo {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .tabs {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 16px;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .tabButton {
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: var(--main);
-    background-color: transparent;
-    padding: 0 0 24px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--main);
+  background-color: transparent;
+  padding: 0 0 24px 0;
+  user-select: none;
 }
 
 .tabButton.active {
-    border-bottom: 5px solid var(--button-hover);
+  padding-bottom: 19px;
+  border-bottom: 5px solid var(--button-hover);
 }
 
 .contentContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 .leftContent {
-    flex: 1;
+  flex: 1;
 }
 
 .rightContent {
-    width: 100%;
+  width: 100%;
 }

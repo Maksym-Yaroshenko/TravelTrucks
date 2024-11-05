@@ -25,7 +25,9 @@ export default function CamperForm() {
           <textarea className={css.textarea}></textarea>
         </label>
         <div className={css.sendButtonContainer}>
-            <button type="submit" className={css.sendButton}>Send</button>
+          <button type="submit" className={css.sendButton}>
+            Send
+          </button>
         </div>
       </form>
     </div>

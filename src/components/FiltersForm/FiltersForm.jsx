@@ -1,10 +1,7 @@
-// src/components/FiltersForm/FiltersForm.jsx
-
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../../redux/filters/slicer.js";
 import css from "./FiltersForm.module.css";
-import "../../index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import sprite from "../../images/icons.svg";
 import { selectFilters } from "../../redux/filters/selectors.js";
 
@@ -14,6 +11,10 @@ export default function FiltersForm() {
 
   const [filtersForm, setFiltersForm] = useState(shapeValuesFromSlicer);
 
+  useEffect(() => {
+    setFiltersForm(shapeValuesFromSlicer);
+  }, [shapeValuesFromSlicer]);
+
   const handleCheck = (e) => {
     const { name, checked } = e.target;
     const formattedName = name.replace(/\s+/g, "");
@@ -21,6 +22,14 @@ export default function FiltersForm() {
     setFiltersForm((prevFilters) => ({
       ...prevFilters,
       [formattedName]: checked,
+    }));
+  };
+
+  const handleLocationChange = (e) => {
+    const newLocation = e.target.value;
+    setFiltersForm((prevFilters) => ({
+      ...prevFilters,
+      location: newLocation,
     }));
   };
 
@@ -37,17 +46,17 @@ export default function FiltersForm() {
 
       <div className={css.locationContainer}>
         <p className={css.locationTitle}>Location</p>
-        <p className={css.locationContent}>
-          <svg
-            // className={css.iconMap}
-            width="20"
-            height="20"
-            aria-label="icon-map"
-          >
-            <use href={`${sprite}#icon-map`}></use>
+        <div className={css.locationInputContainer}>
+          <svg className={css.iconMap}>
+            <use xlinkHref={`${sprite}#icon-map`} />
           </svg>
-          <span>Kyiv, Ukraine</span>
-        </p>
+          <input
+            type="text"
+            className={css.locationInput}
+            placeholder="Enter location"
+            onChange={handleLocationChange}
+          />
+        </div>
       </div>
 
       <fieldset>
@@ -64,7 +73,6 @@ export default function FiltersForm() {
                 checked={filtersForm[label.replace(/\s+/g, "")]}
                 onChange={handleCheck}
               />
-
               <label htmlFor={label}>
                 <div className={css.iconAndText}>
                   <svg className={css.filterItemIcon}>

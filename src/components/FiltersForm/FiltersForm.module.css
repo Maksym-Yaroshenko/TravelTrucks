@@ -9,6 +9,39 @@
 .locationTitle {
   margin-bottom: 8px;
   color: var(--dark-gray);
+  user-select: none;
+}
+
+.locationInputContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--inputs);
+  border-radius: 12px;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+.locationInput {
+  flex: 1;
+  padding: 18px 20px 18px 0;
+  border: none;
+  border-radius: 12px;
+  color: var(--main);
+  font-size: 16px;
+  height: 100%;
+  background: transparent;
+}
+
+.locationInput:focus {
+  outline: none;
+}
+
+.iconMap {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  user-select: none;
 }
 
 .locationContent {
@@ -67,35 +100,20 @@
   display: none;
 }
 
-.filterItem input[type="checkbox"]+label {
+.filterItem input[type="checkbox"] + label {
   content: "";
-  /* display: inline-block; */
-  /* width: 16px;
-  height: 16px; */
   border: 2px solid var(--light-gray);
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.filterItem input[type="checkbox"]:checked+label {
+.filterItem input[type="checkbox"]:checked + label {
   border: 2px solid var(--button);
 }
 
-.filterItem input[type="checkbox"]:checked+label {
+.filterItem input[type="checkbox"]:checked + label {
   /* background-color: var(--button); */
   border-color: var(--button);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .typeFilter {
   color: var(--main);
