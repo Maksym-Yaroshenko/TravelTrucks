@@ -7,7 +7,7 @@ import "../../index.css";
 
 export default function CatalogPage() {
   return (
-    <section className={`${css.CatalogPage} section`}>
+    <section className={`${css.CatalogPage} section scrollable-content`}>
       <FiltersForm className={css.Filters} />
       <CamperList className={css.camperList} />
     </section>

@@ -10,7 +10,7 @@ export default function CamperIdPage() {
   const { camperId } = useParams();
 
   return (
-    <>
+    <div className={`scrollable-content`}>
       <section className={`${css.CamperDetailedDescription} section`}>
         <CamperDetailedDescription />
       </section>
@@ -18,6 +18,6 @@ export default function CamperIdPage() {
       <section className={`${css.CamperDetailedInfo} section`}>
         <CamperDetailedInfo camperId={camperId} />
       </section>
-    </>
+    </div>
   );
 }

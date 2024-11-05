@@ -4,13 +4,16 @@ header {
   align-items: center;
   position: relative;
   background-color: var(--inputs);
+
+  padding-right: 200px;
+
 }
 
 .divLogo {
   grid-column: 1 / 2;
   justify-content: start;
   padding-left: 24px;
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 
 .logo {
