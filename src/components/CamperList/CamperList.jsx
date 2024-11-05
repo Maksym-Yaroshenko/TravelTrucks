@@ -46,6 +46,7 @@ export default function CamperList() {
         const truckKey = filterKeyMap[key];
         const truckValue = truck[truckKey];
 
+        if (key === "Automatic") return truckValue === "automatic";
         if (key === "Van") return truckValue === "panelTruck";
         if (key === "FullyIntegrated") return truckValue === "fullyIntegrated";
         if (key === "Alcove") return truckValue === "alcove";
