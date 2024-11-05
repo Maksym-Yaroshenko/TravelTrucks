@@ -1,77 +1,70 @@
 .truckName {
-    color: var(--main);
+  color: var(--main);
 
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 133.33%;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.33%;
 
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-
-
 .truckPrice {
-    color: var(--main);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 133.33%;
+  color: var(--main);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.33%;
 
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .imgList {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
 
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .imgItem {
-    object-fit: cover;
-    border-radius: 10px;
-    height: 312px;
-    /* min-width: 292px; */
+  object-fit: cover;
+  border-radius: 10px;
+  height: 312px;
+  /* min-width: 292px; */
 }
 
-
-
 @media screen and (min-width: 768px) {
-    .imgList {
-        gap: 36px;
-    }
+  .imgList {
+    gap: 36px;
+  }
 
-    .li {
-        width: calc((100% - 2 * 36px) / 2);
-    }
+  .li {
+    width: calc((100% - 2 * 36px) / 2);
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .imgList {
-        gap: 48px;
-    }
+  .imgList {
+    gap: 48px;
+  }
 
-    .li {
-        width: calc((100% - 3 * 48px) / 3);
-    }
+  .li {
+    width: calc((100% - 3 * 48px) / 3);
+  }
 }
 
 @media screen and (min-width: 1936px) {
-    .imgItem {
-        height: 100%;
-    }
+  .imgItem {
+    height: 100%;
+  }
 }
 
-
-
-
 .truckDescription {
-    color: var(--text);
+  color: var(--text);
 
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
