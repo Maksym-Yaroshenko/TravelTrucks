@@ -27,7 +27,7 @@
 
 .contentContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 40px;
 }
 
@@ -37,4 +37,14 @@
 
 .rightContent {
   width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .contentContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rightContent {
+    width: 100%;
+  }
 }

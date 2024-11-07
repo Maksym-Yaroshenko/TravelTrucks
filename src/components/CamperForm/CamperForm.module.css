@@ -9,6 +9,69 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin-top: 24px;
+}
+
+.formText {
+  color: var(--dark-gray);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-top: 8px;
+}
+
+.label {
+  border-radius: 12px;
+  background: var(--inputs);
+  user-select: none;
+}
+
+.input {
+  border-radius: 12px;
+  min-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 18px;
+  color: var(--dark-gray);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.textarea {
+  border-radius: 12px;
+  min-height: 118px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 18px;
+  color: var(--dark-gray);
+  resize: none;
+  overflow: hidden;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.charCount {
+  font-size: 14px;
+  color: var(--dark-gray);
+  text-align: right;
+  margin: 5px 18px 12px 5px;
+}
+
+.charCount.error {
+  color: var(--button);
 }
 
 .sendButtonContainer {
@@ -17,6 +80,7 @@
 }
 
 .sendButton {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,4 +95,9 @@
 
 .sendButton:hover {
   background-color: var(--button-hover);
+}
+
+.sendButton:disabled {
+  background-color: var(--light-gray);
+  cursor: not-allowed;
 }
