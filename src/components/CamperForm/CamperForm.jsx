@@ -1,31 +1,85 @@
 // src/components/CamperForm/CamperForm.jsx
 
+import { useState } from "react";
 import css from "./CamperForm.module.css";
 
 export default function CamperForm() {
+  const [comment, setComment] = useState("");
+  const maxLength = 225;
+  const [isOverLimit, setIsOverLimit] = useState(false);
+
+  const handleCommentChange = (e) => {
+    const value = e.target.value;
+    setComment(value);
+
+    if (value.length > maxLength) {
+      setIsOverLimit(true);
+    } else {
+      setIsOverLimit(false);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isOverLimit) {
+      alert("Your comment exceeds the character limit!");
+      return;
+    }
+    alert("Form submitted");
+  };
+
   return (
     <div className={css.formContainer}>
       <h3>Book your campervan now</h3>
-      <p>Stay connected! We are always ready to help you.</p>
-      <form className={css.form}>
+      <p className={css.formText}>
+        Stay connected! We are always ready to help you.
+      </p>
+      <form className={css.form} onSubmit={handleSubmit}>
         <label className={css.label}>
-          Name*
-          <input type="text" required className={css.input} />
+          <input
+            type="text"
+            name="name"
+            placeholder="Name*"
+            required
+            className={css.input}
+          />
         </label>
         <label className={css.label}>
-          Email*
-          <input type="email" required className={css.input} />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email*"
+            required
+            className={css.input}
+          />
         </label>
         <label className={css.label}>
-          Booking date*
-          <input type="date" required className={css.input} />
+          <input
+            type="text"
+            name="date"
+            placeholder="Booking date*"
+            required
+            className={css.input}
+          />
         </label>
         <label className={css.label}>
-          Comment
-          <textarea className={css.textarea}></textarea>
+          <textarea
+            name="comment"
+            placeholder="Comment"
+            className={css.textarea}
+            value={comment}
+            onChange={handleCommentChange}
+          ></textarea>
+          <div className={`${css.charCount} ${isOverLimit ? css.error : ""}`}>
+            {comment.length}/{maxLength}
+          </div>
         </label>
         <div className={css.sendButtonContainer}>
-          <button type="submit" className={css.sendButton}>
+          <button
+            type="submit"
+            className={css.sendButton}
+            disabled={isOverLimit}
+          >
             Send
           </button>
         </div>
