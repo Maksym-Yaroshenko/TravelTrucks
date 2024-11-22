@@ -30,3 +30,16 @@
 
     padding: 12px 18px;
 }
+
+.vehicleDetails {
+    color: var(--main);
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    border-bottom: 1px solid var(--light-gray);
+
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}

@@ -27,6 +27,18 @@ export default function CamperFeatures() {
   const { camperId } = useParams();
   const truck = useSelector(selectTrucks)[camperId - 1];
 
+  console.log(truck);
+  // const truckDetailesFormArray = ["form"];
+  const truckDetailesForm = {
+    form: "Form",
+    length: "Length",
+    width: "Width",
+    height: "Height",
+    tank: "Tank",
+    consumption: "Consumption",
+  };
+  console.log(Object.entries(truckDetailesForm));
+
   // const arrOptions = [];
 
   // for (const [key, value] of Object.entries(truck)) {
@@ -48,8 +60,16 @@ export default function CamperFeatures() {
             )
         )}
       </ul>
-      <h4>CamperFeatures are here</h4>
-      <p>Such a great Camper</p>
+      <h3 className={css.vehicleDetails}>Vehicle details</h3>
+
+      <ul>
+        {Object.entries(truckDetailesForm).map(([key, name]) => (
+          <li key={key}>
+            <p>{name}</p>
+            <p>{truck[key]}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

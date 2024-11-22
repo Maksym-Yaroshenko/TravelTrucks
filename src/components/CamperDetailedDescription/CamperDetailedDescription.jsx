@@ -11,7 +11,6 @@ import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 export default function CamperDetailedDescription() {
   const { camperId } = useParams();
   const truck = useSelector(selectTrucks)[camperId - 1];
-  console.log(truck);
   return (
     <>
       <h2 className="visually-hidden">Info truck card</h2>
