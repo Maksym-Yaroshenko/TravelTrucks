@@ -20,8 +20,15 @@
   color: var(--button-hover);
 }
 
+@media screen and (min-width: 375px) {
+  .navigationList {
+    margin-left: -40px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .navigationList {
     gap: 32px;
+    margin-left: -58px;
   }
 }
