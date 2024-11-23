@@ -37,7 +37,7 @@ export default function CamperFeatures() {
     tank: "Tank",
     consumption: "Consumption",
   };
-  console.log(Object.entries(truckDetailesForm));
+  // console.log(Object.entries(truckDetailesForm));
 
   // const arrOptions = [];
 
@@ -48,7 +48,7 @@ export default function CamperFeatures() {
   // console.log(arrOptions);
 
   return (
-    <div className={css.container}>
+    <li className={css.container}>
       <ul className={css.menuIcons}>
         {Object.entries(ICONS_MAP).map(
           ([key, iconId]) =>
@@ -62,14 +62,14 @@ export default function CamperFeatures() {
       </ul>
       <h3 className={css.vehicleDetails}>Vehicle details</h3>
 
-      <ul>
+      <ul className={css.formMenu}>
         {Object.entries(truckDetailesForm).map(([key, name]) => (
-          <li key={key}>
+          <li className={css.formItem} key={key}>
             <p>{name}</p>
             <p>{truck[key]}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </li>
   );
 }

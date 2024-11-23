@@ -43,3 +43,16 @@
     padding-bottom: 24px;
     margin-bottom: 24px;
 }
+
+.formMenu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+
+.formItem {
+    display: flex;
+    justify-content: space-between;
+}

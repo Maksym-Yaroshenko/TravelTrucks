@@ -12,8 +12,8 @@ export default function CamperDetailedInfo({ camperId }) {
   const [activeTab, setActiveTab] = useState("features");
 
   return (
-    <div className={css.camperDetailedInfo}>
-      <div className={css.tabs}>
+    <ul className={css.camperDetailedInfo}>
+      <li className={css.tabs}>
         <button
           className={`${css.tabButton} ${
             activeTab === "features" ? css.active : ""
@@ -30,19 +30,21 @@ export default function CamperDetailedInfo({ camperId }) {
         >
           Reviews
         </button>
-      </div>
+      </li>
 
-      <div className={css.contentContainer}>
-        {activeTab === "features" ? (
-          <CamperFeatures />
-        ) : (
-          <CamperReviews camperId={camperId} />
-        )}
-        <div className={css.rightContent}>
-          <CamperForm />
-        </div>
-      </div>
-    </div>
+      <li>
+        <ul className={css.contentContainer}>
+          {activeTab === "features" ? (
+            <CamperFeatures />
+          ) : (
+            <CamperReviews camperId={camperId} />
+          )}
+          <li className={css.rightContent}>
+            <CamperForm />
+          </li>
+        </ul>
+      </li>
+    </ul>
   );
 }
 

@@ -22,11 +22,11 @@ export default function CamperReviews({ camperId }) {
     dispatch(fetchReviews(camperId));
   }, [dispatch, camperId]);
 
-  if (isLoading) return <Loader />;;
+  if (isLoading) return <Loader />;
   if (error) return <p>Error loading reviews: {error}</p>;
 
   return (
-    <div className={css.reviewSection}>
+    <li className={css.reviewSection}>
       <h2 className="visually-hidden">Reviews</h2>
       {reviews.map((review) => (
         <div key={review.reviewer_name} className={css.reviewContainer}>
@@ -39,7 +39,7 @@ export default function CamperReviews({ camperId }) {
           </div>
         </div>
       ))}
-    </div>
+    </li>
   );
 }
 
