@@ -56,3 +56,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+.formItem p {
+    color: var(--main);
+    font-weight: 500;
+    line-height: 150%;
+}
