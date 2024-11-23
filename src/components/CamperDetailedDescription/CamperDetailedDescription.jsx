@@ -6,11 +6,19 @@ import "../../index.css";
 import css from "./CamperDetailedDescription.module.css";
 import { useParams } from "react-router-dom";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
 import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 
 export default function CamperDetailedDescription() {
   const { camperId } = useParams();
   const truck = useSelector(selectTrucks)[camperId - 1];
+
   return (
     <>
       <h2 className="visually-hidden">Info truck card</h2>
@@ -20,17 +28,39 @@ export default function CamperDetailedDescription() {
       <p className={css.truckPrice}>€{truck.price}</p>
 
       {truck.gallery.length > 0 && (
-        <ul className={css.imgList}>
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={24}
+          slidesPerView={1}
+          loop={true}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          speed={800}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 36,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 48,
+            },
+          }}
+          className={css.imgList}
+        >
           {truck.gallery.map((img, id) => (
-            <li className={css.li} key={id}>
+            <SwiperSlide key={id} className={css.imgSlide}>
               <img
                 className={css.imgItem}
                 src={img.thumb}
                 alt={`${truck.name} image`}
               />
-            </li>
+            </SwiperSlide>
           ))}
-        </ul>
+        </Swiper>
       )}
 
       <p className={css.truckDescription}>{truck.description}</p>
