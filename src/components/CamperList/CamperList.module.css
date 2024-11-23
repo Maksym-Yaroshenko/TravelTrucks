@@ -1,6 +1,10 @@
 .camperList {
   display: grid;
-  gap: 16px;
+  gap: 20px;
+}
+
+.loadMoreButtonContainer:nth-last-child(-n + 1) {
+  margin-top: 20px;
 }
 
 .card {
@@ -10,6 +14,7 @@
 .loadMoreButtonContainer {
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .loadMoreButton {
@@ -30,6 +35,14 @@
 @media screen and (min-width: 768px) {
   .camperList {
     gap: 24px;
+  }
+
+  .loadMoreButtonContainer {
+    margin-bottom: 0;
+  }
+
+  .loadMoreButtonContainer:nth-last-child(-n + 1) {
+    margin-top: 24px;
   }
 }
 

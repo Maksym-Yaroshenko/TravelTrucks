@@ -10,6 +10,13 @@ import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
 export default function VehicleCard({ truck }) {
   if (!truck) return null;
 
+  const objectIcons = {
+    AC: "AC",
+    TV: "TV",
+    bathroom: "Bathroom",
+    kitchen: "Kitchen",
+  };
+
   return (
     <div className={css.vehicleCard}>
       <h2 className="visually-hidden">Trucks List</h2>
@@ -33,37 +40,17 @@ export default function VehicleCard({ truck }) {
       <p className={css.truckDescription}>{truck.description}</p>
 
       <ul className={css.truckFeatures}>
-        {truck.AC && (
-          <li className={css.featureItem}>
-            <svg className={css.featureIcon}>
-              <use xlinkHref={`${sprite}#AC`} />
-            </svg>
-            AC
-          </li>
-        )}
-        {truck.TV && (
-          <li className={css.featureItem}>
-            <svg className={css.featureIcon}>
-              <use xlinkHref={`${sprite}#TV`} />
-            </svg>
-            TV
-          </li>
-        )}
-        {truck.bathroom && (
-          <li className={css.featureItem}>
-            <svg className={css.featureIcon}>
-              <use xlinkHref={`${sprite}#Bathroom`} />
-            </svg>
-            Bathroom
-          </li>
-        )}
-        {truck.kitchen && (
-          <li className={css.featureItem}>
-            <svg className={css.featureIcon}>
-              <use xlinkHref={`${sprite}#Kitchen`} />
-            </svg>
-            Kitchen
-          </li>
+        {Object.entries(objectIcons).map(
+          ([key, name]) =>
+            // console.log(key, name);
+            truck[key] && (
+              <li className={css.featureItem} key={key}>
+                <svg className={css.featureIcon}>
+                  <use xlinkHref={`${sprite}#${name}`} />
+                </svg>
+                <p className={css.featureItemName}>{name}</p>
+              </li>
+            )
         )}
       </ul>
 

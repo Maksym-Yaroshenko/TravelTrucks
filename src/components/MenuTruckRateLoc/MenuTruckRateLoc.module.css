@@ -15,7 +15,7 @@
 .truckRatingLink {
     color: var(--main);
 
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -29,7 +29,7 @@
 
 .truckLocation {
     color: var(--main);
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -42,4 +42,14 @@
 
 .iconMap {
     margin-right: 4px;
+}
+
+@media screen and (min-width: 375px) {
+    .truckRatingLink {
+        font-size: 16px;
+    }
+
+    .truckLocation {
+        font-size: 16px;
+    }
 }
