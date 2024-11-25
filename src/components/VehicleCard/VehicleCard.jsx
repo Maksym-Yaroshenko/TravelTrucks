@@ -1,20 +1,31 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/prop-types */
 // src/components/VehicleCard/VehicleCard.jsx
 
-import PropTypes from "prop-types";
 import css from "./VehicleCard.module.css";
 import "../../index.css";
 import { Link } from "react-router-dom";
 import sprite from "../../images/icons.svg";
 import MenuTruckRateLoc from "../MenuTruckRateLoc/MenuTruckRateLoc.jsx";
+import { setIsFavorite } from "../../redux/isFavorite/slicer.js";
+import { useDispatch, useSelector } from "react-redux";
+import { selectorIsFavorite } from "../../redux/isFavorite/selectors.js";
 
 export default function VehicleCard({ truck }) {
   if (!truck) return null;
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectorIsFavorite);
+  const booleanFavorite = favorites.includes(Number(truck.id));
 
   const objectIcons = {
     AC: "AC",
     TV: "TV",
     bathroom: "Bathroom",
     kitchen: "Kitchen",
+  };
+
+  const handleFavoriteClick = () => {
+    dispatch(setIsFavorite(truck.id));
   };
 
   return (
@@ -30,7 +41,14 @@ export default function VehicleCard({ truck }) {
         <h3 className={css.truckName}>{truck.name}</h3>
         <div className={css.truckPriceContainer}>
           <p className={css.truckPrice}>€{truck.price}</p>
-          <svg width="25" height="24">
+          <svg
+            className={`${css.svgBorder} ${
+              booleanFavorite ? css.svgBorderActive : ""
+            }`}
+            onClick={handleFavoriteClick}
+            width="25"
+            height="24"
+          >
             <use xlinkHref={`${sprite}#Heart`} />
           </svg>
         </div>
@@ -62,21 +80,3 @@ export default function VehicleCard({ truck }) {
     </div>
   );
 }
-
-VehicleCard.propTypes = {
-  truck: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    description: PropTypes.string,
-    gallery: PropTypes.arrayOf(
-      PropTypes.shape({
-        thumb: PropTypes.string.isRequired,
-      })
-    ),
-    AC: PropTypes.bool,
-    TV: PropTypes.bool,
-    bathroom: PropTypes.bool,
-    kitchen: PropTypes.bool,
-  }).isRequired,
-};

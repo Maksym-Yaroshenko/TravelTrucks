@@ -5,18 +5,20 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import trucksSlicer from "./trucks/slicer.js";
 import filtersSlicer from "./filters/slicer.js";
-import reviewsSlicer from "./reviews/slicer.js"
+import reviewsSlicer from "./reviews/slicer.js";
+import isFavoriteSlicer from "./isFavorite/slicer.js";
 
 const rootReducer = combineReducers({
   trucks: trucksSlicer,
   filters: filtersSlicer,
   reviews: reviewsSlicer,
+  isFavorite: isFavoriteSlicer,
 });
 
 const trucksPersistConfig = {
   key: "root",
   storage,
-  whitelist: ["trucks"],
+  whitelist: ["trucks", "isFavorite"],
 };
 
 const persistedReducer = persistReducer(trucksPersistConfig, rootReducer);

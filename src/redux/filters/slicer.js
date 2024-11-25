@@ -12,6 +12,7 @@ export const initialState = {
     Van: false,
     FullyIntegrated: false,
     Alcove: false,
+    location: null,
   },
 };
 

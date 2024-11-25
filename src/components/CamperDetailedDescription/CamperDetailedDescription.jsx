@@ -33,6 +33,7 @@ export default function CamperDetailedDescription() {
           spaceBetween={24}
           slidesPerView={1}
           loop={true}
+          // loop={truck.gallery.length > 1}
           pagination={{ clickable: true }}
           autoplay={{
             delay: 5000,

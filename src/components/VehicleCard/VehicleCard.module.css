@@ -53,6 +53,26 @@
   font-weight: 600;
 }
 
+.svgBorder {
+  fill: var(--main);
+  transition: fill 250ms ease-in-out;
+}
+
+.svgBorderActive {
+  fill: var(--button);
+  transition: fill 250ms ease-in-out;
+}
+
+/* .svgBorder {
+  fill: var(--svg-fill, var(--main));
+  transition: fill 250ms ease-in-out;
+}
+
+.svgBorderActive {
+  --svg-fill: var(--button);
+} */
+
+
 /* .truckRateLoc {
   display: grid;
   grid-template-columns: 1fr;
