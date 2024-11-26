@@ -12,6 +12,10 @@ import {
   selectError,
 } from "../../redux/trucks/selectors.js";
 import { selectFilters } from "../../redux/filters/selectors.js";
+import {
+  selectorBooleanFavorite,
+  selectorIsFavorite,
+} from "../../redux/isFavorite/selectors.js";
 
 export default function CamperList() {
   const dispatch = useDispatch();
@@ -20,6 +24,8 @@ export default function CamperList() {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const filters = useSelector(selectFilters);
+  const booleanFavorite = useSelector(selectorBooleanFavorite);
+  const arrFavorite = useSelector(selectorIsFavorite);
 
   const [visibleCount, setVisibleCount] = useState(4);
 
@@ -81,12 +87,19 @@ export default function CamperList() {
 
   return (
     <ul className={css.camperList}>
-      {filteredTrucks.slice(0, visibleCount).map((truck) => (
-        <li className={css.card} key={truck.id}>
-          <VehicleCard truck={truck} />
-        </li>
-      ))}
-      {visibleCount < filteredTrucks.length && (
+      {(booleanFavorite
+        ? filteredTrucks.filter((truck) =>
+            arrFavorite.includes(Number(truck.id))
+          )
+        : filteredTrucks
+      )
+        .slice(0, visibleCount)
+        .map((truck) => (
+          <li className={css.card} key={truck.id}>
+            <VehicleCard truck={truck} />
+          </li>
+        ))}
+      {visibleCount < filteredTrucks.length && !booleanFavorite && (
         <li className={css.loadMoreButtonContainer}>
           <button onClick={loadMore} className={css.loadMoreButton}>
             Load More

@@ -4,6 +4,7 @@ const isFavoriteSlicer = createSlice({
   name: "isFavorite",
   initialState: {
     items: [],
+    selectFavorite: false,
   },
   reducers: {
     setIsFavorite: (state, action) => {
@@ -16,8 +17,11 @@ const isFavoriteSlicer = createSlice({
         state.items.push(id);
       }
     },
+    toggleFavorites: (state, action) => {
+      state.selectFavorite = action.payload;
+    },
   },
 });
 
-export const { setIsFavorite } = isFavoriteSlicer.actions;
+export const { setIsFavorite, toggleFavorites } = isFavoriteSlicer.actions;
 export default isFavoriteSlicer.reducer;
