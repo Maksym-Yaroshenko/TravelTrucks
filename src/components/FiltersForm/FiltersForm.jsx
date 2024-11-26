@@ -114,9 +114,9 @@ export default function FiltersForm() {
 
       <div className={css.searchButtonContainer}>
         <button
+          className={css.searchButton}
           type="button"
           onClick={handleSearch}
-          className={css.searchButton}
         >
           Search
         </button>

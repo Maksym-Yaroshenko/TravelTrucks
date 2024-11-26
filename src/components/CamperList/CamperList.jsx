@@ -100,8 +100,8 @@ export default function CamperList() {
           </li>
         ))}
       {visibleCount < filteredTrucks.length && !booleanFavorite && (
-        <li className={css.loadMoreButtonContainer}>
-          <button onClick={loadMore} className={css.loadMoreButton}>
+        <li className={`${css.loadMoreButtonContainer} ${css.card}`}>
+          <button className={css.loadMoreButton} onClick={loadMore}>
             Load More
           </button>
         </li>

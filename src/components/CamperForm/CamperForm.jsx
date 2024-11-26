@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import css from "./CamperForm.module.css";
+import iziToast from "izitoast";
 
 export default function CamperForm() {
   const [comment, setComment] = useState("");
-  const maxLength = 225;
   const [isOverLimit, setIsOverLimit] = useState(false);
+  const maxLength = 225;
 
   const handleCommentChange = (e) => {
     const value = e.target.value;
@@ -22,10 +23,22 @@ export default function CamperForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isOverLimit) {
-      alert("Your comment exceeds the character limit!");
+      iziToast.error({
+        title: "Error",
+        message: "Your comment exceeds the character limit!",
+        position: "topRight",
+      });
       return;
     }
-    alert("Form submitted");
+
+    iziToast.success({
+      title: "Success",
+      message: "Form submitted successfully!",
+      position: "topRight",
+    });
+
+    setComment("");
+    e.target.reset();
   };
 
   return (
@@ -76,8 +89,8 @@ export default function CamperForm() {
         </label>
         <div className={css.sendButtonContainer}>
           <button
-            type="submit"
             className={css.sendButton}
+            type="submit"
             disabled={isOverLimit}
           >
             Send

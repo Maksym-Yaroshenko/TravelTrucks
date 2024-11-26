@@ -91,6 +91,8 @@
   color: var(--white);
   font-size: 14px;
   user-select: none;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
 }
 
 .sendButton:hover {

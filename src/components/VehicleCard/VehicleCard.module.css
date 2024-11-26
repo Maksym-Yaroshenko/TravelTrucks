@@ -155,6 +155,7 @@
   font-size: 14px;
   letter-spacing: -0.08px;
   user-select: none;
+  transition: background-color 250ms ease-in-out;
 }
 
 .showMoreButton:hover {
