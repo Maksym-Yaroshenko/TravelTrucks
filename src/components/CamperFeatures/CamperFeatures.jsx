@@ -27,8 +27,6 @@ export default function CamperFeatures() {
   const { camperId } = useParams();
   const truck = useSelector(selectTrucks)[camperId - 1];
 
-  console.log(truck);
-  // const truckDetailesFormArray = ["form"];
   const truckDetailesForm = {
     form: "Form",
     length: "Length",
@@ -37,15 +35,6 @@ export default function CamperFeatures() {
     tank: "Tank",
     consumption: "Consumption",
   };
-  // console.log(Object.entries(truckDetailesForm));
-
-  // const arrOptions = [];
-
-  // for (const [key, value] of Object.entries(truck)) {
-  //   if (value === true) arrOptions.push(key.toUpperCase());
-  //   // console.log(key, value);
-  // }
-  // console.log(arrOptions);
 
   return (
     <li className={css.container}>

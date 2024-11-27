@@ -19,6 +19,17 @@ export default function CamperDetailedDescription() {
   const { camperId } = useParams();
   const truck = useSelector(selectTrucks)[camperId - 1];
 
+  const duplicatedGallery = [];
+
+  if (truck.gallery.length <= 3) {
+    for (let i = 0; i < 3; i++) {
+      truck.gallery.map((elem) => duplicatedGallery.push(elem));
+      // duplicatedGallery.push(truck.gallery);
+    }
+  } else {
+    duplicatedGallery.push(truck.gallery);
+  }
+
   return (
     <>
       <h2 className="visually-hidden">Info truck card</h2>
@@ -27,13 +38,13 @@ export default function CamperDetailedDescription() {
 
       <p className={css.truckPrice}>€{truck.price}</p>
 
-      {truck.gallery.length > 0 && (
+      {duplicatedGallery.length > 0 && (
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={24}
           slidesPerView={1}
-          loop={true}
-          // loop={truck.gallery.length > 1}
+          // loop={true}
+          // loop={truck.gallery.length >= 3}
           pagination={{ clickable: true }}
           autoplay={{
             delay: 5000,
@@ -47,7 +58,7 @@ export default function CamperDetailedDescription() {
             },
             1280: {
               slidesPerView: 3,
-              spaceBetween: 48,
+              // spaceBetween: 48,
             },
           }}
           className={css.imgList}

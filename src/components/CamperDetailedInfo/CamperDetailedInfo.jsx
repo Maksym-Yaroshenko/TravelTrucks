@@ -1,14 +1,14 @@
 // src/components/CamperDetailedInfo/CamperDetailedInfo.jsx
 
 import { useState } from "react";
-import PropTypes from "prop-types";
 import CamperFeatures from "../CamperFeatures/CamperFeatures";
 import CamperReviews from "../CamperReviews/CamperReviews";
 import CamperForm from "../CamperForm/CamperForm";
 import css from "./CamperDetailedInfo.module.css";
 import "../../index.css";
 
-export default function CamperDetailedInfo({ camperId }) {
+// export default function CamperDetailedInfo({ camperId }) {
+export default function CamperDetailedInfo() {
   const [activeTab, setActiveTab] = useState("features");
 
   return (
@@ -37,7 +37,8 @@ export default function CamperDetailedInfo({ camperId }) {
           {activeTab === "features" ? (
             <CamperFeatures />
           ) : (
-            <CamperReviews camperId={camperId} />
+            // <CamperReviews camperId={camperId} />
+            <CamperReviews />
           )}
           <li className={css.rightContent}>
             <CamperForm />
@@ -47,7 +48,3 @@ export default function CamperDetailedInfo({ camperId }) {
     </ul>
   );
 }
-
-CamperDetailedInfo.propTypes = {
-  camperId: PropTypes.string.isRequired,
-};
