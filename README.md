@@ -1,12 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 # TravelTrucks
 
 **TravelTrucks** is a web application for searching and selecting modern campers for travel. The project was created for outdoor enthusiasts who value comfort, functionality and style.
@@ -26,22 +17,26 @@ Currently, two official plugins are available:
 
 ## Installation Instructions
 
-To deploy the project locally, follow these steps:
+**To deploy the project locally, follow these steps:**
 
 1. **Cloning the repository**
 
 https://github.com/Maksym-Yaroshenko/TravelTrucks.git
 
 2. **Installing dependencies**
+
    Use the npm or yarn package manager:
 
 npm install
+
 yarn install
 
 3. **Starting the project**
+
    Start the local server:
 
 npm run dev
+
 yarn run test
 
 The project will be available at http://localhost:3000
@@ -52,11 +47,9 @@ The project will be available at http://localhost:3000
 
 The project was created using the following technologies:
 
-Frontend: React, Redux, CSS modules.
-
-Backend: Node.js, Express.
-
-Deployment: Render, Vercel.
+- Frontend: React, Redux, CSS modules.
+- Backend: Node.js, Express.
+- Deployment: Render, Vercel.
 
 ---
 
