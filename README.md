@@ -71,4 +71,4 @@ The project was created using the following technologies:
 
    Linkedin: https://www.linkedin.com/in/dmitry-ponomarenko-a5b970322/
 
-   Email: .........
+   Email: dponomar19@gmail.com
