@@ -29,6 +29,8 @@ https://github.com/Maksym-Yaroshenko/TravelTrucks.git
 
 npm install
 
+**or**
+
 yarn install
 
 3. **Starting the project**
@@ -37,7 +39,7 @@ yarn install
 
 npm run dev
 
-# or
+**or**
 
 yarn dev
 
