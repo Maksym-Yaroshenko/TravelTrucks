@@ -5,22 +5,37 @@
 .filterListFavorite {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
 
-  background-color: var(--light-gray);
-
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--light-gray);
   margin-bottom: 30px;
 }
 
 .filterItemFavorite {
+  font-size: 16px;
   font-weight: 600;
+  line-height: 120%;
+
+  background-color: transparent;
+  border: 2px solid var(--light-gray);
+  border-radius: 12px;
+  cursor: pointer;
+
+  width: 120px;
+  height: 60px;
+
+  transition: color 250ms ease-in-out, border 250ms ease-in-out;
 }
+
 
 .filterItemFavoriteActive {
-  color: red;
+  color: var(--button);
+  border: 2px solid var(--button);
 }
 
-.heartIcon {}
+/* .heartIcon {} */
 
 .locationContainer {
   width: 100%;
@@ -69,10 +84,11 @@
   align-items: center;
   gap: 8px;
   padding: 18px 20px;
-  margin-bottom: 40px;
   border-radius: 12px;
   background-color: var(--inputs);
   color: var(--main);
+
+  margin-bottom: 40px;
 }
 
 .filterList {

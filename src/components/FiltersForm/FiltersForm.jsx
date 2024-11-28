@@ -55,24 +55,28 @@ export default function FiltersForm() {
   return (
     <div className={css.filtersForm}>
       <ul className={css.filterListFavorite} onClick={handleFavoriteClick}>
-        <li
-          className={`${css.filterItemFavorite} ${
-            booleanFavorite === true ? css.filterItemFavoriteActive : ""
-          }`}
-          id="favorite"
-        >
-          FAVORITE
-          <svg className={css.heartIcon} width="20" height="20">
-            <use xlinkHref={`${sprite}#Heart`} />
-          </svg>
+        <li>
+          <button
+            className={`${css.filterItemFavorite} ${
+              booleanFavorite === true ? css.filterItemFavoriteActive : ""
+            }`}
+            id="favorite"
+          >
+            FAVORITE
+            {/* <svg className={css.heartIcon} width="20" height="20">
+              <use xlinkHref={`${sprite}#Heart`} />
+            </svg> */}
+          </button>
         </li>
-        <li
-          className={`${css.filterItemFavorite} ${
-            booleanFavorite === false ? css.filterItemFavoriteActive : ""
-          }`}
-          id="all"
-        >
-          ALL
+        <li>
+          <button
+            className={`${css.filterItemFavorite} ${
+              booleanFavorite === false ? css.filterItemFavoriteActive : ""
+            }`}
+            id="all"
+          >
+            ALL
+          </button>
         </li>
       </ul>
       <form action="">
