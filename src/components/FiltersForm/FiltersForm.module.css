@@ -2,6 +2,26 @@
   margin-bottom: 60px;
 }
 
+.filterListFavorite {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: var(--light-gray);
+
+  margin-bottom: 30px;
+}
+
+.filterItemFavorite {
+  font-weight: 600;
+}
+
+.filterItemFavoriteActive {
+  color: red;
+}
+
+.heartIcon {}
+
 .locationContainer {
   width: 100%;
 }

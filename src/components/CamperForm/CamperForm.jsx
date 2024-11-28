@@ -1,8 +1,8 @@
 // src/components/CamperForm/CamperForm.jsx
-
 import { useState } from "react";
 import css from "./CamperForm.module.css";
 import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 export default function CamperForm() {
   const [comment, setComment] = useState("");
@@ -30,7 +30,6 @@ export default function CamperForm() {
       });
       return;
     }
-
     iziToast.success({
       title: "Success",
       message: "Form submitted successfully!",

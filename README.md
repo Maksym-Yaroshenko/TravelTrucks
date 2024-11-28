@@ -37,7 +37,9 @@ yarn install
 
 npm run dev
 
-yarn run test
+# or
+
+yarn dev
 
 The project will be available at http://localhost:3000
 
