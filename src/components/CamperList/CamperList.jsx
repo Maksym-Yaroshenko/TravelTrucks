@@ -82,7 +82,7 @@ export default function CamperList() {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div>An error has occurred. Please refresh the page.{error}</div>;
   }
 
   return (
@@ -99,6 +99,11 @@ export default function CamperList() {
             <VehicleCard truck={truck} />
           </li>
         ))}
+      {arrFavorite.length === 0 && (
+        <h3 className={css.noFeaturedCampers}>
+          There are no featured campers yet.
+        </h3>
+      )}
       {visibleCount < filteredTrucks.length && !booleanFavorite && (
         <li className={`${css.loadMoreButtonContainer} ${css.card}`}>
           <button className={css.loadMoreButton} onClick={loadMore}>

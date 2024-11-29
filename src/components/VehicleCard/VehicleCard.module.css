@@ -56,6 +56,7 @@
 .svgBorder {
   fill: var(--main);
   transition: fill 250ms ease-in-out;
+  cursor: pointer;
 }
 
 .svgBorderActive {

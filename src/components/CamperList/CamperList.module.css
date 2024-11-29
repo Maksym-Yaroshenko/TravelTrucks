@@ -11,6 +11,13 @@
   max-width: 888px;
 }
 
+.noFeaturedCampers {
+  color: var(--main);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 133.333%;
+}
+
 .loadMoreButtonContainer {
   /* display: flex;
   justify-content: center; */
