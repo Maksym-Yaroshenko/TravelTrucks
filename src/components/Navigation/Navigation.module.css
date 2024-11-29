@@ -10,6 +10,7 @@
   font-weight: 500;
   line-height: 150%;
   color: var(--main);
+  transform: rotate(0deg);
   transition: transform 200ms ease-in-out, color 200ms ease-in-out;
 
   padding-top: 24px;
@@ -18,8 +19,22 @@
 
 .linkItem:hover {
   color: var(--button-hover);
+  /* background-color: var(--light-gray); */
   transform: rotate(-10deg);
 }
+
+@media screen and (max-width: 1279px) {
+  .linkItem:active {
+    transform: rotate(0deg);
+  }
+
+  .linkItem::before {
+    transform: rotate(0deg);
+  }
+
+}
+
+
 
 .active {
   color: var(--button-hover);

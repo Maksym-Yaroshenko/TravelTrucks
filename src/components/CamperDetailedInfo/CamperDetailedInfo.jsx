@@ -7,7 +7,6 @@ import CamperForm from "../CamperForm/CamperForm";
 import css from "./CamperDetailedInfo.module.css";
 import "../../index.css";
 
-// export default function CamperDetailedInfo({ camperId }) {
 export default function CamperDetailedInfo() {
   const [activeTab, setActiveTab] = useState("features");
 
@@ -34,12 +33,7 @@ export default function CamperDetailedInfo() {
 
       <li>
         <ul className={css.contentContainer}>
-          {activeTab === "features" ? (
-            <CamperFeatures />
-          ) : (
-            // <CamperReviews camperId={camperId} />
-            <CamperReviews />
-          )}
+          {activeTab === "features" ? <CamperFeatures /> : <CamperReviews />}
           <li className={css.rightContent}>
             <CamperForm />
           </li>
