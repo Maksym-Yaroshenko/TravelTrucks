@@ -21,7 +21,7 @@ const filtersSlicer = createSlice({
   initialState,
   reducers: {
     setFilter: (state, action) => {
-      console.log(action.payload);
+      // console.log(action.payload);
       state.filters = action.payload;
     },
   },
