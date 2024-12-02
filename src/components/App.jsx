@@ -20,7 +20,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:camperId" element={<CamperIdPage />} />
-          {/* <Route path="/catalog/:*" element={<NotFoundPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
