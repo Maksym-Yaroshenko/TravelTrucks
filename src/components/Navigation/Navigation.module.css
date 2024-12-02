@@ -18,19 +18,11 @@
 }
 
 .linkItem:hover {
-  color: var(--button-hover);
   /* background-color: var(--light-gray); */
-  transform: rotate(-10deg);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1279px) {
-  .linkItem:active {
-    transform: rotate(0deg);
-  }
-
-  .linkItem::before {
-    transform: rotate(0deg);
-  }
 
 }
 
@@ -38,7 +30,6 @@
 
 .active {
   color: var(--button-hover);
-  /* transform: rotate(-15deg); */
 }
 
 @media screen and (min-width: 375px) {
