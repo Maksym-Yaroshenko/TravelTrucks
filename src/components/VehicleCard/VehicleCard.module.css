@@ -61,6 +61,8 @@
 
 .svgBorderActive {
   fill: var(--button);
+
+  /* stroke: red; */
   transition: fill 250ms ease-in-out;
 }
 

@@ -99,7 +99,7 @@ export default function CamperList() {
             <VehicleCard truck={truck} />
           </li>
         ))}
-      {arrFavorite.length === 0 && (
+      {booleanFavorite && arrFavorite.length === 0 && (
         <h3 className={css.noFeaturedCampers}>
           There are no featured campers yet.
         </h3>
