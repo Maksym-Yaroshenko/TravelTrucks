@@ -49,7 +49,11 @@ export default function VehicleCard({ truck }) {
             width="25"
             height="24"
           >
-            <use xlinkHref={`${sprite}#Heart`} />
+            <use
+              xlinkHref={`${sprite}#${
+                booleanFavorite ? "Heart-active" : "Heart"
+              }`}
+            />
           </svg>
         </div>
       </div>

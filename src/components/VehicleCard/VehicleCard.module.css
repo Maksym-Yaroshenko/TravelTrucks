@@ -54,6 +54,10 @@
 }
 
 .svgBorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   fill: var(--main);
   transition: fill 250ms ease-in-out;
   cursor: pointer;
@@ -62,18 +66,10 @@
 .svgBorderActive {
   fill: var(--button);
 
-  /* stroke: red; */
+  /* stroke: var(--button); */
   transition: fill 250ms ease-in-out;
 }
 
-/* .svgBorder {
-  fill: var(--svg-fill, var(--main));
-  transition: fill 250ms ease-in-out;
-}
-
-.svgBorderActive {
-  --svg-fill: var(--button);
-} */
 
 
 /* .truckRateLoc {
